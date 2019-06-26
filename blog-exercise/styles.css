@@ -1,0 +1,64 @@
+header {
+    
+    background-color: gray;
+    text-align: left;
+    
+    height: 40px; 
+    border: solid black 1.2px;
+    
+}
+
+#comments {
+    width:45%;
+    height:150px;
+    padding:2%;
+    margin-left: 15%;
+    font-size:1.2em;
+    border:1px solid darkslateblue;
+}
+
+h1 {
+    margin: 0px;
+}
+
+h1,h2 {
+    margin-left: 15%;
+    margin-bottom: 0%;
+}
+
+#Submit-button {
+    margin-left: 15%;
+}
+
+.single-comment {
+    background-color: white;
+  width: auto;
+  border: 1px solid black;
+  padding: auto;
+  margin: 15px;
+  margin-left: 15%;
+  margin-right: 15%;
+  
+  text-align: center;
+}
+
+.name-of-the-post {
+    font-size: 22px;
+    text-align: left;
+    margin-left: 4px;
+}
+
+#blog-name {
+    font-size: 26px;
+    font-style: normal;
+    margin-top: 4px;
+}
+
+#title {
+    margin-left: 15%;
+    margin-bottom: 0%;
+}
+
+p {
+    text-align: justify;
+}
