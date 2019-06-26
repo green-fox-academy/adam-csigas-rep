@@ -1,0 +1,49 @@
+header {
+    background-color: #333333;
+    text-align: right;
+    height: 40px; 
+    
+}
+
+
+img {
+   float: left;
+}
+
+a, h3 {
+    color: #ff0099;
+}
+
+body {
+    margin: 2px;
+    font-family: 'Courier New';
+    
+}
+
+main {
+    margin: 10%;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+
+
+.navigationSpace {
+    width: 10px;
+}
+
+#separator {
+    text-align: center;
+    margin: 5%;
+}
+
+h1,h2,h3, h4 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+p{
+    text-align: justify;
+}
