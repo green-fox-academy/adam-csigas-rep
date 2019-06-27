@@ -1,0 +1,20 @@
+pwd - present working directory (shows you which directory you're currently in. usually "/" at the beginning aka root :) )
+ls - list (shows you all the VISIBLE files in the directory)
+ls -a - (shows you ALL files in the directory)
+cd home - change directory "home" ( it will go to the directory called "home" )
+cd DoCuMenTs - change directory !!!: linux terminal is case sensitive
+mkdir "name of your directory" - make directory
+cd .. - takes you back to the previous directory
+cd ~ - brings you back to "home" directory
+cd / - brings you back to root directory
+cd /home/kids/Documents - if you want to go "Documents" from "Root" you have to write down the exact passageway
+rmdir "name of the directory" - remove directory (delete, no question!!!). It not works if there is file in the directory!
+rm -R - remove directory and the files within the directory (!!! BE CAREFUL W IT)
+nano - one of the programs that linux command line is bundled together with. Nano is a text editor.
+  nano "helloworld" - runs the "helloworld" text (in case you have one :) ). In linux you have to specify the program
+  which you are firing the file up.
+
+
+
+
+

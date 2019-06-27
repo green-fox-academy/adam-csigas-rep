@@ -1,0 +1,28 @@
+to start git do its thing:
+git init
+config --global user.name 'username'
+config --globacl user.email 'useremailaddress'
+
+//
+
+git rm --cached index.html
+
+add *.html // adds all html files
+
+add 'filename' // add file
+
+add . // add all files (you gotta do this before you save, and have new files and want to change branch)
+
+---
+
+git commit -m 'Changed app.js'
+
+git .ignore: We dont wanna include in our repository
+
+: touch .gitignore // to create it ;; open it in a text editor;; put the name of the unwanted file name to the .gitignore
+
+entire directories: eg.: /dir2 <- if you put this to the .ignore, this command will add the whole directory to ignore
+w *.txt 
+
+Branches:
+

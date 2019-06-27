@@ -1,0 +1,8 @@
+Version Control system - for tracking changes in computer files
++++: "decentralized" version control system. That means many developers can work on a single project without having on the
+same network.
+
+you can go back to older versions -> repository
+local depo, remote depo
+
+Keeps track of code history snapshot the files
