@@ -15,7 +15,7 @@ let myName : string = "Adam Csigas";
 let myAge : number = 27;
 let myHeight: number = 181/100;
 
-console.log(myName);
-console.log(myAge);
-console.log(myHeight);
+console.log("My name is: " + myName);
+console.log("I am "+ myAge + " years old.");
+console.log("I am " + myHeight + " m tall.");
 
