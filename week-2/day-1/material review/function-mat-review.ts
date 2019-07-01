@@ -18,14 +18,22 @@ function printNumberAndChangeIt(inputNumber : number = 10): void {
     console.log(doubledValue);
 }
 
+printNumberAndChangeIt();
+printNumberAndChangeIt(11);
+
+
+
+/*  
 function multiplication(base: number, another: number): number {
     return base * another;
 }
 
-printNumberAndChangeIt();
-printNumberAndChangeIt(11);
+
+
 
 console.log(multiplication(3, 6)); //multiplication aka method
+
+*/
 
 
 
