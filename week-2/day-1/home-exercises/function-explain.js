@@ -5,9 +5,9 @@ call them later on whenever you want it, or find it easily if you want to update
 
 */
 
-function getAverage(a,b){
+function getAverage(a, b) {
 
-    var average = (a+b) / 2;
+    var average = (a + b) / 2;
     console.log(average);
     return average;
 
@@ -21,5 +21,5 @@ getAverage(7, 12);
 
 /* Second level :D */
 
-var myResult = getAverage(7,8);
+var myResult = getAverage(7, 8);
 console.log("The average is " + myResult);
