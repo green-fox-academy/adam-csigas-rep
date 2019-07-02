@@ -8,8 +8,12 @@ Get the index of Durian from List B
 Add Passion Fruit and Pomelo to List B in a single statement
 Print out the 3rd element from List A */
 
-let ListA: string[] = ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];
-let ListB: string[] = ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];
+
+let ListA = ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];
+let ListB = ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];
+
+
+
 
 if (ListA[3] === ListB[3]) {
     console.log("Both lists contains the given element.");

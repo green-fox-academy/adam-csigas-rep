@@ -1,34 +1,47 @@
 /* Create an empty list which will contain names(strings)
-Print out the number of elements in the list
-Add William to the list
-Print out whether the list is empty or not
-Add John to the list
-Add Amanda to the list
-Print out the number of elements in the list
-Print out the 3rd element
-Iterate through the list and print out each name */
+ */
 
 'use strict';
 
 export = {};
 
-let list: string[] = [];
+// Create an empty list which will contain names (strings)
 
-console.log(list.length);
+let list = {
+    names: [],
+};
 
-list[0] = 'Williams';
+console.log(list);
 
-if (list.length > 0) {
-    console.log("It's not empty.")
+
+//Add William to the list
+
+list.names.push('William');
+
+//Print out whether the list is empty or not
+
+if (list.names.length > 0) {
+    console.log("not empty.")
 } else {
-    console.log("It's empty.")
+    console.log("empty.");
 }
 
-list.push('John', 'Amanda');
+//Add John to the list
 
-console.log(list.length);
-console.log(list[2]);
+list.names.push('John', 'Amanda');
 
-list.forEach(function (item) {
-    console.log(item);
-})
+
+// Print out the number of elements in the list
+
+console.log(list.names.length);
+
+// Print out the 3rd element
+
+console.log(list.names[2]);
+
+// Iterate through the list and print out each name
+
+for (let i: number = 0; i < list.names.length; i++) {
+    console.log(list.names[i]);
+}
+
