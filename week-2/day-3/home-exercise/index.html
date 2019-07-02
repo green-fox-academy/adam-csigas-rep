@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Baby!</title>
+</head>
+
+<body>
+
+    <canvas id='canvas' style='border: 1px solid;width: 800px; height: 600px;'>
+        Sorry, your browser does not support the canvas tag.
+    </canvas>
+
+    <script>
+
+        // Cache a reference to the html element
+        let canvas = document.getElementById('canvas');
+
+        canvas.width = canvas.scrollWidth;
+        canvas.height = canvas.scrollHeight;
+
+
+        let ctx = canvas.getContext('2d');
+
+        //some practice drawing :)
+
+        /* ctx.fillStyle = 'green';
+        ctx.fillRect(50, 50, 100, 100); //x, y, w, h
+
+        ctx.strokeStyle = 'red';
+        ctx.strokeRect(200, 50, 100, 100);
+
+        ctx.fillStyle = 'blue';
+        ctx.beginPath();
+        ctx.arc(400, 100, 50, 0, Math.PI * 2);
+        ctx.fill(); // x,y are the midpoint of our arcius , radius, starting angle, ending angle
+
+        ctx.strokeStyle = 'purple';
+        ctx.beginPath();
+        ctx.arc(550, 100, 50, 0, Math.PI * 2);
+        ctx.stroke(); // x,y are the midpoint of our arcius , radius, starting angle, ending angle
+
+        ctx.fillStyle = 'pink';
+        ctx.beginPath();
+        ctx.arc(700, 100, 50, 0, Math.PI / 2);
+        ctx.stroke(); // x,y are the midpoint of our arcius , radius, starting angle, ending angle
+        ctx.lineTo(700, 100);
+        ctx.fill(); */
+
+        // Draw a path which is outlined
+
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(200, 100);
+        ctx.moveTo(100, 200);
+        ctx.lineTo(50, 100);
+
+        ctx.strokeStyle = 'green';
+        ctx.stroke();
+
+        //draw a path which is filled
+
+        ctx.beginPath();
+        ctx.moveTo(400, 100);
+        ctx.lineTo(500, 100);
+        ctx.lineTo(400, 200);
+        ctx.lineTo(350, 100);
+
+        ctx.fillStyle = 'green';
+        ctx.fill();
+
+        //Circle
+        ctx.beginPath();
+        ctx.arc(650, 150, 50, 0, Math.PI / 2);
+        ctx.lineTo(650, 150);
+
+        ctx.fillStyle = 'green';
+        ctx.fill();
+
+
+
+
+    </script>
+
+</body>
+
+</html>
