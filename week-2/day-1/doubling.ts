@@ -4,10 +4,10 @@
 
 'usestrict';
 
-let baseNum : number = 123;
+let baseNum: number = 123;
 
 function doubling(givenValue: number): number {
     return givenValue * baseNum;
 }
 
-console.log(doubling(3));
+console.log(doubling(2));

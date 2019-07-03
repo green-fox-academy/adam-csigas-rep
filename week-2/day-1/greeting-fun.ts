@@ -3,9 +3,11 @@
 //     -  Greeting is printing e.g. `Greetings, dear Green Fox`
 // -  Greet `nameToGreet`
 
-let nameToGreet : string = "Adam";
+'use strict';
 
-function greet(nameOfTheGreeting1 : string ) : string {
+let nameToGreet: string = "Adam";
+
+function greet(nameOfTheGreeting1: string): string {
     return nameOfTheGreeting1 + nameToGreet;
 }
 
