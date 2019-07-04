@@ -15,9 +15,10 @@ export = {};
 let myColors: string[] = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
 
 function squareception(size: number) {
-    for (let i: number = 0; i < 8; i++) {
-        ctx.strokeRect((canvas.width / 2) - i * (size / 2), (canvas.height / 2) - (size / 2) * i, i * size, i * size);
-        ctx.strokeStyle = myColors[i];
+    for (let i: number = 7; i >= 0; i--) {
+        ctx.fillStyle = myColors[i - 1];
+        ctx.fillRect((canvas.width / 2) - i * (size / 2), (canvas.height / 2) - (size / 2) * i, i * size, i * size);
+
     }
 }
 squareception(20);
