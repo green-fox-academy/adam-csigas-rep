@@ -1,6 +1,3 @@
-/* Create an empty list which will contain names(strings)
- */
-
 'use strict';
 
 export = {};
