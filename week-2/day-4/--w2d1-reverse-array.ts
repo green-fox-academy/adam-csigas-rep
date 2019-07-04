@@ -7,18 +7,17 @@
 
 'use strict';
 export = {};
+//first solution:
+
+//let numList: number[] = [3, 4, 5, 6, 7];
+//console.log(numList.reverse());
+
+//second one:
 
 let numList: number[] = [3, 4, 5, 6, 7];
-
-console.log(numList.reverse());
-
 let reverseNum: number[] = [];
 
-for (let i: number = numList[5]; i >= 0; i--) {
-
+for (let i: number = numList[numList.length - 1]; i >= numList[0]; i--) {
+    reverseNum.push(i);
 }
 console.log(reverseNum);
-
-/*  for (let j: number = 0 ; j <= numList[5]; j++) {
-     reverseNum[j] += numList[i];
- } */
