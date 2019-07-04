@@ -14,6 +14,7 @@ export = {};
 
 let gap: number = 50;
 
+
 function DrawToMiddle(myXCord: number, myYCord: number) {
     ctx.beginPath();
     ctx.strokeStyle = 'red';

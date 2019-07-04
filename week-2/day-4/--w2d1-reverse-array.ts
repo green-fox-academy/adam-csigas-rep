@@ -14,12 +14,11 @@ console.log(numList.reverse());
 
 let reverseNum: number[] = [];
 
-/* for (let i: number = numList[5]; i >= 0; i--) {
-
-    for (let j: number = 0 ; j <= numList[5]; j++) {
-        reverseNum[j] += numList[i];
-    }
+for (let i: number = numList[5]; i >= 0; i--) {
 
 }
-console.log(reverseNum); */
-//have no idea why?!
+console.log(reverseNum);
+
+/*  for (let j: number = 0 ; j <= numList[5]; j++) {
+     reverseNum[j] += numList[i];
+ } */
