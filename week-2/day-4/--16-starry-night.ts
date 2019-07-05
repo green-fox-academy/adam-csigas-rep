@@ -54,3 +54,5 @@ function drawStar(positionX: number, positionY: number, size: number) {
 for (let i: number = 1; i <= numberOfStars; i++) {
     drawStar(Math.floor(Math.random() * (canvas.width - starSizeMax)), Math.floor(Math.random() * (canvas.height - starSizeMax)), Math.floor(Math.random() * starSizeMax));
 }
+
+//not my code don't understand it yet!!

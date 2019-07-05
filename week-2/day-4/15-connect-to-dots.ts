@@ -15,12 +15,12 @@ const ctx = canvas.getContext('2d');
 export = {};
 
 
-let taskPara = {
+/* let taskPara = {
     boxA: [[10, 10], [290, 10], [290, 290], [10, 290]],
     whatTheF: [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]]
 }
 
-/* function drawTheThing(TheThing: any) {
+function drawTheThing(TheThing: any) {
     TheThing.boxA.forEach(center => {
         ctx.strokeRect(center[i], center[i + 1], 50, 50)
         ctx.fillStyle = "lime";

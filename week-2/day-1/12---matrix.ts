@@ -17,10 +17,10 @@
 let matrix: number[][] = [];
 
 let size: number = 5;
-for (let index = 0; index < size; index++) {
+for (let i = 0; i < size; i++) {
     let row: number[] = [];
-    for (let inner: number = 0; inner < size; inner++) {
-        if (size - inner - 1 == index) {
+    for (let j: number = 0; j < size; j++) {
+        if (size - j - 1 == i) {
             row.push(1);
         } else {
             row.push(0);
@@ -32,4 +32,5 @@ for (let index = 0; index < size; index++) {
 
 console.log(matrix);
 
-//This one is not created by me!!! Have to work on it
+//This one is not created by me!!! Have to work on it.
+//05.07.19 i understand the code

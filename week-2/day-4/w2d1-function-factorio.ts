@@ -6,6 +6,23 @@
 
 export { };
 
+
+/* function sum(N: number): number {
+    let myNumbers: number[] = [];
+    let neededThing: number = 1;
+
+    for (let i: number = 1; i <= N; i++) {
+        myNumbers.push(i);
+    }
+
+    for (let j: number = 0; j < myNumbers.length; j++) {
+        neededThing *= myNumbers[j];
+    }
+
+    return neededThing
+}
+ */
+
 let myNumbers: number[] = [];
 
 function sum(N: number): number {
@@ -22,8 +39,7 @@ function sum(N: number): number {
     return neededThing
 }
 
-console.log(sum(6)); // I have no clue whats going on here... 
 
-console.log(sum(4));
-
-console.log(sum(3));
+console.log(sum(5)); // I have no clue whats going on here... 
+console.log(sum(4)); // I have no clue whats going on here...
+console.log(sum(3)); // I have no clue whats going on here... 
