@@ -18,6 +18,17 @@ function bubble(orderedNums: number[] = []): number[] {
 console.log(bubble([34, 12, 24, 9, 5]));
 
 
+function advencedBubble(orderedNums: number[] = [], areYouHungry: boolean): any[] {
+    if (areYouHungry === true) {
+        orderedNums.sort((function (a, b) { return a - b }))
+        return orderedNums.reverse();
+    } else {
+        orderedNums.sort((function (a, b) { return a - b }))
+    }
+    return orderedNums;
+}
+console.log(advencedBubble([34, 12, 24, 9, 5], true))
+
 
 
 
