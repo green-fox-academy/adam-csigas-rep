@@ -11,23 +11,21 @@
 'use strict';
 export { }
 
-let reverseNum: number[] = [];
-let myNumbers: number[] = [3, 4, 5, 6, 7];
-
-function bubble(reverseOrderedNums: number[] = []): number[] {
-    for (let i: number = myNumbers[myNumbers.length - 1]; i >= myNumbers[0]; i--) {
-        reverseNum.push(i);
-    }
-    console.log(reverseNum)
-    return reverseNum
+function bubble(orderedNums: number[] = []): number[] {
+    orderedNums.sort((function (a, b) { return a - b }))
+    return orderedNums
 }
+console.log(bubble([34, 12, 24, 9, 5]));
 
-console.log(bubble([1, 2, 3, 4, 5]))
 
-/* let myNumbers: number[] = [3, 4, 5, 6, 7];
-let reverseNum: number[] = [];
 
-for (let i: number = myNumbers[myNumbers.length - 1]; i >= myNumbers[0]; i--) {
-    reverseNum.push(i);
-}
-console.log(reverseNum); */
+
+
+
+
+
+
+
+
+
+
