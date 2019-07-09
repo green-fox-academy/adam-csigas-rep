@@ -23,10 +23,7 @@ function fruitLetterCounter(path: string, myWord: string, myNumber: number): any
             fs.appendFileSync(path, 'apple');
         } else {
             fs.appendFileSync(path, myWord); //When you call put '' fumbass
-
         }
-
-
     }
 }
 console.log(fruitLetterCounter('04-mytext.txt', 'apple\n', 5));
