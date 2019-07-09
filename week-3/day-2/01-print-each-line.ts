@@ -3,7 +3,6 @@
 // If the program is unable to read the file (for example it does not exist),
 // then it should print the following error message: "Unable to read file: my-file.txt"
 
-'use strict';
 export { };
 
 declare function require(path: string): any;

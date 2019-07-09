@@ -3,8 +3,6 @@
 // It should return zero if it can't open the file, and
 // should not raise any error.
 
-'use strict';
-
 export { };
 
 declare function require(path: string): any;
@@ -23,4 +21,7 @@ try {
 console.log(content)
 
 let lines: string[] = content.split('\n');
+
 console.log(lines.length);
+
+
