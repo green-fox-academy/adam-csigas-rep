@@ -22,12 +22,25 @@ drawPoint({
 class Point {
     x: number; //fields
     y: number;
-    
-    draw() {
-        // ...
+
+    constructor(x?: number, y?: number) {
+        this.x = x;
+        this.y = y;
     }
 
-    getDistance(another: Point) {
-        //...
+    draw() {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
     }
 }
+let point = new Point();
+
+/* what if we have:
+let point = new Point();
+point.x = 1;
+point.x = 2;
+point.x = 3;
+...
+...
+...
+in OOP there is a concept called : Constructor. Every class can have one.
+*/
