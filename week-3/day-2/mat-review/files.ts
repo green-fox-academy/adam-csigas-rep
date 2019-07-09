@@ -9,4 +9,4 @@ try {
     content = '';
 }
 
-console.log(content[0]);
+

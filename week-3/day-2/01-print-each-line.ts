@@ -10,8 +10,12 @@ declare function require(path: string): any;
 
 const fs = require('fs');
 
-let content = fs.readFileSync('01-my-file.txt', 'utf-8');
 
-console.log(content)
 
+try {
+    let content = fs.readFileSync('01-my-file.txt', 'utf-8');
+    console.log(content);
+} catch (e) {
+    console.log('unable to read file: my-file.txt');
+}
 
