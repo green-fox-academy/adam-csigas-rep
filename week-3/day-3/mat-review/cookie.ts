@@ -4,19 +4,19 @@ class Cookie {
     flavor: string;
     id: number;
     static lastId: number = 1;
-    private status: string = 'raw';
+    private status: string;
 
-    bakeMe() {
+    bakeMe(): void {
         this.status = 'baked to perfection';
     }
 
     //how to make status accessable
 
-    checkMyStatus() {
+    checkMyStatus(): string {
         return this.status;
     }
 
-    static howAreYouToday(mood: string) {
+    static howAreYouToday(mood: string): string {
         return 'I am doing ${mood}';
     }
 
@@ -46,6 +46,13 @@ Math.PI;
 
 class Dog {
     static animalType: string = 'mammals';
+    private stomach: any;
+    eat(food: Object): void {
+        this.stomach.food += food;
+    }
 }
+
+let furkesz: Dog = new Dog();
+furkesz.eat({ yummy: 'yummy' });
 
 export default Cookie;

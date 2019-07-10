@@ -21,6 +21,10 @@ class Tray {
         }
     }
 
+    putOnTray(cookie: Cookie): void {
+        this.cookies.push(cookie)
+    }
+
 }
 
 let myFirstTray: Tray = new Tray();
@@ -28,6 +32,7 @@ let myFirstCookie: Cookie = new Cookie('elephant', false, 'vanilla'); // this is
 let mySecondCookie: Cookie = new Cookie('spider', true, 'chocolate');
 
 myFirstTray.cookies.push(myFirstCookie, mySecondCookie);
+
 myFirstTray.bakeThemAll();
 
 console.log(myFirstTray);
