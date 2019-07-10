@@ -8,9 +8,20 @@ class Car {
 
     private _ownerName: string;
 
-    constructor(public brandName: string) {
+    private constructor(public brandName: string) {
         Car.SERIES_NUMBER++;
         this._seriesNumber = Car.SERIES_NUMBER;
+    }
+
+    public static BuildCar(brandName: string): Car {
+        return new Car(brandName);
+    }
+
+    public static BuyCar(brandName: string, ownerName: string) {
+        let car = new Car(brandName);
+        car.ownerName = ownerName;
+
+        return car;
     }
 
     public startCar(): void {
@@ -34,14 +45,13 @@ class Car {
     }
 }
 
-let car = new Car('Mazda');
+let car = Car.BuyCar('Mazda', 'Slava');
 car.startCar();
-car.ownerName = 'Slava';
 console.log('Brand number:', car.brandName);
 console.log('Series number:', car.seriesNumber);
 console.log('Owner name:', car.ownerName);
 
-let car2 = new Car('Mazda');
+let car2 = Car.BuyCar('Mazda', 'Other Name');
 console.log('Brand number 2:', car2.brandName);
 console.log('Series number 2:', car2.seriesNumber);
 console.log('Owner name:', car2.ownerName);
@@ -56,3 +66,5 @@ public brandName: string;
     constructor(public brandName: string){
     }
 */
+
+
