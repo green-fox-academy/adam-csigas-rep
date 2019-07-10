@@ -1,4 +1,4 @@
-import { Pokemon } from './Pokemon'
+import { Pokemon } from './06-Pokemon'
 
 let pokemonOfAsh: Pokemon[] = initializePokemon();
 
@@ -12,7 +12,6 @@ let wildPokemon: Pokemon = new Pokemon('Oddish', 'leaf', 'water');
 
 // Which pokemon should Ash use?
 
-console.log('I choose you, ');
 
 function initializePokemon(): Pokemon[] {
     return [
@@ -23,3 +22,11 @@ function initializePokemon(): Pokemon[] {
         new Pokemon('Kingler', 'water', 'fire')
     ];
 }
+
+console.log(wildPokemon.type);
+console.log(pokemonOfAsh[2]);
+
+
+//console.log('I choose you, ');
+
+//as a solution I would call the method from pokemon class but it's missing and I don't know why?!
