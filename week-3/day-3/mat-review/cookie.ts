@@ -6,10 +6,13 @@ class Cookie {
     static lastId: number = 1;
     private status: string;
 
-    bakeMe(): void {
-        this.status = 'baked to perfection';
+    constructor(shape?: string, hasSparkles?: boolean, flavor?: string) {  // .this is a reference and it works in object only
+        this.shape = shape;
+        this.hasSparkles = hasSparkles;
+        this.flavor = flavor;
+        this.id = Cookie.lastId;
+        Cookie.lastId++;
     }
-
     //how to make status accessable
 
     checkMyStatus(): string {
@@ -20,14 +23,9 @@ class Cookie {
         return 'I am doing ${mood}';
     }
 
-    constructor(shape?: string, hasSparkles?: boolean, flavor?: string) {  // .this is a reference and it works in object only
-        this.shape = shape;
-        this.hasSparkles = hasSparkles;
-        this.flavor = flavor;
-        this.id = Cookie.lastId;
-        Cookie.lastId++;
+    bakeMe(): void {
+        this.status = 'baked to perfection';
     }
-
 }
 
 let myFirstCookie: Cookie = new Cookie('elephant', false, 'vanilla'); // this is also called instance
