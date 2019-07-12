@@ -13,3 +13,4 @@ export class Pokemon {
         return this.effectiveAgainst === pokemon.type;
     }
 }
+

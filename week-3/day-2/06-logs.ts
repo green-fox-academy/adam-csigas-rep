@@ -11,7 +11,7 @@ const fs = require('fs');
 /* let content = fs.readFileSync('06-logs.txt', 'utf-8');
 let datumlessContent: string = content.split("Mon Feb  5 10:47:12 2018"); */
 
-let logContent: string = fs.readFileSync('06-logs.txt', 'utf-8');
+/* let logContent: string = fs.readFileSync('06-logs.txt', 'utf-8');
 let logArray = logContent.split('\n');
 
 function buildIPArrays(logArray: string[]): string[] {
@@ -25,7 +25,7 @@ function buildIPArrays(logArray: string[]): string[] {
     });
     return uniqueIPsArray;
 }
-buildIPArrays()
+buildIPArrays(1) */
 
 /* //function uniqueIP(): any {
 let allTheIP: string[] = [""];

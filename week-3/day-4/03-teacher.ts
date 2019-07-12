@@ -1,0 +1,31 @@
+/* Create Student and Teacher classes
+Student
+learn() -> prints the student is learning something new
+    question(teacher) -> calls the teachers answer method
+Teacher
+teach(student) -> calls the students learn method
+answer() -> prints the teacher is answering a question
+Instantiate a Student and Teacher object
+Call the student's question() method and the teacher's teach() method */
+
+'use strict';
+import { Student } from './03-student';
+
+class Teacher {
+    teachersName: string;
+
+    teach() {
+
+    }
+
+    answer() {
+        console.log("This is the answer to your question.");
+    }
+
+    constructor(teachername: string) {
+        this.teachersName = teachername;
+    }
+}
+export { Teacher }
+
+let Teacher1: Teacher = new Teacher('Janosba');

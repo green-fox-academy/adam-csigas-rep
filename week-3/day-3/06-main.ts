@@ -18,13 +18,16 @@ function initializePokemon(): Pokemon[] {
         new Pokemon('Balbasaur', 'leaf', 'water'),
         new Pokemon('Pikatchu', 'electric', 'water'),
         new Pokemon('Charizard', 'fire', 'leaf'),
-        new Pokemon('Balbasaur', 'water', 'fire'),
+        new Pokemon('Squirtle', 'water', 'fire'),
         new Pokemon('Kingler', 'water', 'fire')
     ];
 }
 
-console.log(wildPokemon.type);
-console.log(pokemonOfAsh[2]);
+let whoIsThis: Pokemon = new Pokemon('sarmander', 'fire', 'leaf');
+
+//whoIsThis.isEffectiveAgainst('Oddish')
+
+
 
 
 //console.log('I choose you, ');
