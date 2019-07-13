@@ -11,3 +11,17 @@ export { }
 999: 10 = 99,9
 99,9 : 10
 9,99 */
+
+
+function sumdigits(n: number) {
+    //let summed: number = 0;
+    if (n < 10) {
+        return n;
+    } else {
+        return n + Math.floor(n % 10);
+    }
+}
+console.log(sumdigits(8));
+console.log(sumdigits(13));
+console.log(sumdigits(567));
+

@@ -5,21 +5,16 @@ export { };
 
 
 function powerizer(base: number, n: number) {
-    let thisShit: number[] = [base, n];
-
     if (base === 0 || n === 0) {
         return 1;
     } else {
-        base * base;
-        n - 1;
-    }
+    } return (base * powerizer(base, n - 1))
 
 }
 
 
 
-console.log(powerizer(4, 2));
+console.log(powerizer(4, 1));
 
-
-let array: number[] = [1, 2, 3, 4, 5];
+// it's not working with negative numbers yet.
 
