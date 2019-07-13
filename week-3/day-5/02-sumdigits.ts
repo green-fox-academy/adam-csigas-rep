@@ -15,13 +15,16 @@ export { }
 
 function sumdigits(n: number) {
     //let summed: number = 0;
-    if (n < 10) {
+    if (n / 10 <= 1) {
         return n;
     } else {
-        return n + Math.floor(n % 10);
+        return (n % 10) + sumdigits((n - (n % 10)) / 10)
     }
 }
 console.log(sumdigits(8));
 console.log(sumdigits(13));
 console.log(sumdigits(567));
+
+
+
 
