@@ -1,6 +1,6 @@
 class Person {
-    constructor() {
-        console.log('Person constructor');
+    constructor(name) {
+        console.log(name + ' Person constructor');
     }
 }
 
@@ -8,4 +8,4 @@ class Employee extends Person {
 
 }
 
-let e = new Employee();
+let e = new Employee("Adam");
