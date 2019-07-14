@@ -22,13 +22,25 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 //for each : easier way to loop through in an array
 
-companies.forEach(function (company) {
+/* companies.forEach(function (company) {
     console.log(company.name);
-});
+}); */
 
 //this forEach is just the same as the for loop before but looks better
 
-//filter
+//filter it helps us filters out stuff what we need
+
+//filtering with for loop:
+
+let canDrink: number[] = [];
+for (let i: number = 0; i < ages.length; i++) {
+    if (ages[i] >= 21) {
+        canDrink.push(ages[i]);
+    }
+}
+
+console.log(canDrink);
+
 //map
 //sort
 //reduce
