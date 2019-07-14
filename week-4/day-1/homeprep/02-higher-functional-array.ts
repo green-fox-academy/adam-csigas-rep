@@ -71,9 +71,16 @@ console.log(eightiesCompanies); */
 // get the companies that lasted at least 10 years
 
 const tenYorMore = companies.filter(company => (company.end - company.start) >= 10)
-console.log(tenYorMore);
 
-//map
+//map : instead of just filtering out we can create new arrays
+
+//create array of company names
+
+const companyNames = companies.map(function (company) {
+    return `${company.name} [${company.start} - ${company.end}]`;
+})
+console.log(companyNames);
+
 //sort
 //reduce
 
