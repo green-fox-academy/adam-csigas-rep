@@ -124,5 +124,41 @@ console.log(sortAges)
 
 // reduce can get really difficult, here we just did some easier exercises
 
+//lets add all the ages together
+
+// first with for loop
+
+//let ageSum: number = 0;
+
+/* for (let i: number = 0; i < ages.length; i++) {
+    ageSum += ages[i];
+} */
 
 
+// with reduce
+
+/* let ageSum: number = ages.reduce(function (total, age) {
+    return total + age;
+}, 0);
+
+console.log(ageSum); */
+
+//with reduce and elegance :D
+
+let ageSum: number = ages.reduce((total, age) => total + age, 0);
+
+console.log(ageSum);
+
+// get total years for all companies
+
+/* const totalYears = companies.reduce(function (total, company) {
+    return total + (company.end - company.start);
+}, 0); */
+
+//console.log(totalYears)
+
+// with reduce and elegance
+
+const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+
+console.log(totalYears)
