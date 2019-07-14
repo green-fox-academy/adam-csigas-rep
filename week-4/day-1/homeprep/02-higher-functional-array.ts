@@ -30,7 +30,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 //filter it helps us filters out stuff what we need
 
-//filtering with for loop:
+//filtering with for loop: //task : get 21 and older
 
 /* let canDrink: number[] = [];
 for (let i: number = 0; i < ages.length; i++) {
@@ -43,13 +43,35 @@ console.log(canDrink); */
 
 //filtering with .filter
 
-const canDrink = ages.filter(function (age) {
+/* const canDrink = ages.filter(function (age) {
     if (age >= 21) {
         return true;
     }
-});
+}); */
 
-console.log(canDrink);
+const canDrink = ages.filter(age => age >= 21);
+
+// Filter retail companies
+
+/* const retailCompanies = companies.filter(function (company) {
+    if (company.category === 'Retail') {
+        return true;
+    }
+}); */
+
+// Filter retail companies with arrow function
+/* const retailCompanies = companies.filter(company => company.category === 'Retail')
+console.log(retailCompanies); */
+
+//get 80s' companies
+
+/* const eightiesCompanies = companies.filter(company => company.start < 1990 && company.start > 1979);
+console.log(eightiesCompanies); */
+
+// get the companies that lasted at least 10 years
+
+const tenYorMore = companies.filter(company => (company.end - company.start) >= 10)
+console.log(tenYorMore);
 
 //map
 //sort
