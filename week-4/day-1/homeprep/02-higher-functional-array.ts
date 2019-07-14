@@ -76,10 +76,17 @@ const tenYorMore = companies.filter(company => (company.end - company.start) >= 
 
 //create array of company names
 
-const companyNames = companies.map(function (company) {
-    return `${company.name} [${company.start} - ${company.end}]`;
-})
+const companyNames = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+
 console.log(companyNames);
+
+// square the ages with map and then multiple it by 2
+
+const agesSquareMultiple = ages
+    .map(age => Math.sqrt(age))
+    .map(age => age * 2);
+
+console.log(agesSquareMultiple);
 
 //sort
 //reduce
