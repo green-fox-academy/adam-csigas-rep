@@ -82,13 +82,47 @@ console.log(companyNames);
 
 // square the ages with map and then multiple it by 2
 
-const agesSquareMultiple = ages
+/* const agesSquareMultiple = ages
     .map(age => Math.sqrt(age))
     .map(age => age * 2);
 
-console.log(agesSquareMultiple);
+console.log(agesSquareMultiple); */
 
 //sort
+
+// sort companies by start name
+
+/* const sortedCompanies = companies.sort(function (c1, c2) {
+    if (c1.start > c2.start) {
+        return 1;
+    } else {
+        return -1;
+    }
+});
+ */
+
+//shorter form
+
+/* const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+
+console.log(sortedCompanies); */
+
+// Other task : now we sort ages
+
+const sortAges = ages.sort((a, b) => a - b);
+
+console.log(sortAges)
+
+
+
+// ? - is a returnary operator. With that we put a condition.
+// if that's true then 1,
+// : <- this means else, -1
+
+
 //reduce
+
+// reduce can get really difficult, here we just did some easier exercises
+
 
 
