@@ -1,3 +1,6 @@
+// Here you can practice foreach, map , filter, reduce and sort
+// video for it:
+
 'use strict';
 export { };
 
@@ -112,8 +115,6 @@ console.log(sortedCompanies); */
 const sortAges = ages.sort((a, b) => a - b);
 
 console.log(sortAges)
-
-
 
 // ? - is a returnary operator. With that we put a condition.
 // if that's true then 1,
