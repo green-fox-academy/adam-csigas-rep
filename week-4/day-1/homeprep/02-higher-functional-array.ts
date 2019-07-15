@@ -1,5 +1,5 @@
 // Here you can practice foreach, map , filter, reduce and sort
-// video for it:
+// video for it: https://www.youtube.com/watch?v=rRgD1yVwIvE
 
 'use strict';
 export { };
@@ -163,3 +163,4 @@ console.log(ageSum);
 const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
 
 console.log(totalYears)
+

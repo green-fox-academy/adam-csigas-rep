@@ -1,3 +1,6 @@
+'use strict';
+export { };
+
 class Person {
     constructor(name) {
         console.log(name + ' Person constructor');
