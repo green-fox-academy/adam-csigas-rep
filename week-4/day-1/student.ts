@@ -11,13 +11,6 @@ class Student extends Person {
         this.previousOrganization = previousOrganization;
         this.skippedDays = skippedDays;
     }
-    /* 
-    The Student class has the following constructors:
-    
-    Student(name, age, gender, previousOrganization): beside the given parameters, it sets skippedDays to 0
-    Student(): sets name to Jane Doe, age to 30, gender to female, previousOrganization to The School of Life, skippedDays to 0
-    
-    */
 
     getGoal() {
         console.log("Be a junior software developer.");
