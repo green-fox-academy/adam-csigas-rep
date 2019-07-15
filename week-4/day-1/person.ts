@@ -5,7 +5,7 @@ class Person {
     age: number;
     gender: string;
 
-    constructor(name: string, age: number, gender: string) {
+    constructor(name = 'Jane Doe', age = 30, gender = 'female') {
         this.name = name;
         this.age = age;
         this.gender = gender;
