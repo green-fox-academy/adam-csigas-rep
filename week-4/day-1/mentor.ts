@@ -25,3 +25,5 @@ methods:
 getGoal(): prints out "Educate brilliant junior software developers."
 introduce(): "Hi, I'm name, a age year old gender level mentor."
 */
+
+export default Mentor;

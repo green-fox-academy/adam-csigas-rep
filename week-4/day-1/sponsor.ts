@@ -27,3 +27,7 @@ class Sponsor extends Person {
     }
 
 }
+
+export default Sponsor;
+
+

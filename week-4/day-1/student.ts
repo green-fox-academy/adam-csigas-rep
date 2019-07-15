@@ -25,3 +25,5 @@ class Student extends Person {
 
     } //increases skippedDays by numberOfDays
 }
+
+export default Student;
