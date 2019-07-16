@@ -4,7 +4,7 @@ import Reptile from "./reptile";
 
 import Mammal from "./mammal";
 
-import Bird from "./bird";
+import { Bird } from "./bird";
 
 
 
