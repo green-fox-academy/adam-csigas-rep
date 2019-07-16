@@ -5,32 +5,33 @@ interface Reservationy {
     getDowBooking(): string;
     getCodeBooking(): string;
 }
-let dow: string[] = ['MON', 'TUE', 'WEN', 'THU', 'FRI', 'SAT', 'SUN'];
+
 
 class Reservation implements Reservationy {
 
-
     getDowBooking(): string {
-        return `${dow[Math.floor(Math.random() * 7)]}`;
+        const dow = ['MON', 'TUE', 'WEN', 'THU', 'FRI', 'SAT', 'SUN'];
+        return `for ${dow[Math.floor(Math.random() * 7)]}`;
     }
     getCodeBooking(): string {
-        // Please note that the reservation code should contain 8 characters randomly from 0-Z, all uppercase letters.
-        return
+        const randomDah = 'POIUZTREWQLKJHGFDSAMNBVCXY9876543210';
+        const codeLength = 8;
+        let randomChar: string = '';
+        for (let i: number = 0; i < codeLength; i++) {
+            randomChar += randomDah.charAt((Math.floor(Math.random() * randomDah.length)));
+        } return `Booking# ${randomChar} `
     }
 
 }
 
-let fuckaduck: Reservation = new Reservation();
+let fuckaduck1: Reservation = new Reservation();
+let fuckaduck2: Reservation = new Reservation();
+let fuckaduck3: Reservation = new Reservation();
+let fuckaduck4: Reservation = new Reservation();
+let fuckaduck5: Reservation = new Reservation();
 
-console.log(fuckaduck.getDowBooking());
-
-let randomDah: string = 'POIUZTREWQLKJHGFDSAMNBVCXY9876543210';
-let codeLength: number = 8;
-
-console.log(randomDah.charAt((Math.floor(Math.random() * randomDah.length))));
-
-for (let i: number = 0; i < codeLength; i++) {
-
-}
-
-//randomDah(Math.floor(Math.random() * 36 + 1);
+console.log(fuckaduck1.getCodeBooking() + fuckaduck1.getDowBooking());
+console.log(fuckaduck2.getCodeBooking() + fuckaduck2.getDowBooking());
+console.log(fuckaduck3.getCodeBooking() + fuckaduck3.getDowBooking());
+console.log(fuckaduck4.getCodeBooking() + fuckaduck4.getDowBooking());
+console.log(fuckaduck5.getCodeBooking() + fuckaduck5.getDowBooking());
