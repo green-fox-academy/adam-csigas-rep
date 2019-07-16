@@ -9,7 +9,7 @@ interface Reservationy {
 
 class Reservation extends ReservationCons implements Reservationy {
     dow: string[];
-    randomDah: string;
+    randomCharSet: string;
     codeLength: number;
 
     getDowBooking(): string {
@@ -19,7 +19,7 @@ class Reservation extends ReservationCons implements Reservationy {
     getCodeBooking(): string {
         let randomChar: string = '';
         for (let i: number = 0; i < this.codeLength; i++) {
-            randomChar += this.randomDah.charAt((Math.floor(Math.random() * this.randomDah.length)));
+            randomChar += this.randomCharSet.charAt((Math.floor(Math.random() * this.randomCharSet.length)));
         } return `Booking# ${randomChar} `
     }
 
