@@ -1,6 +1,6 @@
 'use strict';
 
-import square from "../../unit-test";
+import square from "./unit-test";
 import { test } from 'tape';
 
 test(t => {
