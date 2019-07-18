@@ -42,7 +42,7 @@ let greyRGBs: string[] = ['rgb(220,220,220)', 'rgb(211,211,211)', 'rgb(192,192,1
 let starSizeMax: number = 20;
 let numberOfStars: number = 60;
 
-//backgroung
+//background
 ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 

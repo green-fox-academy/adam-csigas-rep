@@ -12,7 +12,7 @@ export = {};
 /* canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight; */
 
-function drawTheLines(numberOfLines: number, topColor: any, bottomColor: any) {
+function drawTheLines(numberOfLines: number, topColor: string, bottomColor: string) {
     ctx.strokeStyle = topColor;
     for (let i: number = 1; i < numberOfLines; i++) {
         ctx.beginPath();

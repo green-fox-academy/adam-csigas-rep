@@ -8,13 +8,13 @@ function powerizer(base: number, n: number) {
     if (base === 0 || n === 0) {
         return 1;
     } else {
-    } return (base * powerizer(base, n - 1))
+    } return (base * powerizer(base, n - 1));
 
 }
 
 
 
-console.log(powerizer(4, 1));
+console.log(powerizer(2, 4));
 
 // it's not working with negative numbers yet.
 
