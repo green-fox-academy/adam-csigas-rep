@@ -10,6 +10,5 @@ test(t => {
     t.equals(emptyArray.sum(), 0);
     t.equals(oneElement.sum(), 113);
     t.equals(beGoodRealTest.sum(), 70);
-
     t.end();
 });
