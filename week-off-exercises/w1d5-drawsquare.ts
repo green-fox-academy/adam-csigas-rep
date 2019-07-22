@@ -1,6 +1,6 @@
 'use strict';
 
-let lineCount: number = 10;
+let lineCount: number = 5;
 
 for (let i: number = 0; i <= lineCount; i++) {
     if (i === 0 || i === lineCount) {
