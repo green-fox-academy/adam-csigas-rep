@@ -6,12 +6,18 @@ let matrix: number[][] = [
     [3, 5, 1],
 ]
 
-function isMatrixsymmetric() {
-
+function isMatrixsymmetric(): boolean {
+    let outPut: boolean = true;
     for (let i: number = 0; i < matrix.length; i++) {
 
         for (let j: number = 0; j < matrix.length; j++) {
-            console.log(matrix[i][j]);
+            if (matrix[i][j] !== matrix[j][i]) {
+                outPut = false;
+            }
         }
     }
+
+    return outPut;
 }
+
+console.log(isMatrixsymmetric());
