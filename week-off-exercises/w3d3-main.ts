@@ -26,11 +26,11 @@ function initializePokemon(): Pokemon[] {
     ];
 }
 
-console.log(wildPokemon.type)
+/* console.log(wildPokemon.type)
 initializePokemon();
 console.log(pokemonOfAsh[0]);
 console.log(pokemonOfAsh[0].isEffectiveAgainst(wildPokemon));
-console.log(pokemonOfAsh[2].isEffectiveAgainst(wildPokemon));
+console.log(pokemonOfAsh[2].isEffectiveAgainst(wildPokemon)); */
 
 
 /* function isAffective(): string {
