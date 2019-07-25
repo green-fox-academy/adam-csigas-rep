@@ -7,7 +7,7 @@ export default class Pirate {
     isCaptain: boolean;
     isLegWooden: boolean;
 
-    constructor(name: string, gold: number = 10, health: number = 10, isCaptain: boolean, isLegWooden: boolean) {
+    constructor(name: string, gold: number = 10, health: number = 10, isCaptain: boolean = (Math.random() <= 0.5), isLegWooden: boolean = (Math.random() <= 0.5)) {
         this.name = name;
         this.gold = gold;
         this.health = health;
@@ -15,8 +15,34 @@ export default class Pirate {
         this.isLegWooden = isLegWooden;
     }
 
+    work(): void {
+        if (this.isCaptain) {
+
+        }
+    };
+
+    party() { };
+
 }
 
-/* A pirate has a name, an amount of gold and health points, the default value of which is 10.
+let Jack = new Pirate('Jack');
 
-A pirate might be a captain and may have a wooden leg. */
+console.log(Jack)
+
+
+//if a pirate is a captain:
+
+/* work() which increases the amount of gold possessed by that pirate by 10 and decrease the HP by 5.
+party() which increases the HP by 10.
+if the pirate is not a captain:
+
+work() which increases the amount of gold by 1 and decreases the HP by 1.
+party() which increases the HP by 1.
+toString() method:
+
+if the pirate has a wooden leg, then the string that is returned by the function must look like this:
+
+Hello, I'm Jack. I have a wooden leg and 20 golds.
+If not:
+
+Hello, I'm Jack. I still have my real legs and 20 golds. */
