@@ -7,10 +7,11 @@ let matrix: number[][] = [
 ]
 
 function isMatrixsymmetric() {
+
     for (let i: number = 0; i < matrix.length; i++) {
 
         for (let j: number = 0; j < matrix.length; j++) {
-
+            console.log(matrix[i][j]);
         }
     }
 }
