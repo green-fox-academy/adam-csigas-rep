@@ -26,21 +26,8 @@ function initializePokemon(): Pokemon[] {
     ];
 }
 
-/* console.log(wildPokemon.type)
-initializePokemon();
-console.log(pokemonOfAsh[0]);
-console.log(pokemonOfAsh[0].isEffectiveAgainst(wildPokemon));
-console.log(pokemonOfAsh[2].isEffectiveAgainst(wildPokemon)); */
-
-
-/* function isAffective(): string {
-    for (let i: number = 0; i < pokemonOfAsh.length; i++) {
-        if (pokemonOfAsh[i].isEffectiveAgainst(wildPokemon) === true) {
-        }
-        return `${pokemonOfAsh[i]} is affective against ${wildPokemon.name}`
-    }
-} */
-
 for (let i: number = 0; i < pokemonOfAsh.length; i++) {
-    console.log(pokemonOfAsh[i].isEffectiveAgainst(wildPokemon));
+    if (pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)) {
+        console.log(pokemonOfAsh[i])
+    }
 }
