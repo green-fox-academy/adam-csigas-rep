@@ -18,8 +18,5 @@ test(t => {
     } else {
         t.equals(pirate01.isLegWooden, false);
     }
-    //t.equals(pirate01.isLegWooden, true);
-    //t.equals(pirate01.isLegWooden, false);
-
     t.end();
 });
