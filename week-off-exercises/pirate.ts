@@ -17,11 +17,31 @@ export default class Pirate {
 
     work(): void {
         if (this.isCaptain) {
-
+            this.gold += 10;
+            this.health -= 5;
+        } else {
+            this.gold++;
+            this.health--;
         }
     };
 
-    party() { };
+    party() {
+        if (this.isCaptain) {
+            this.health += 10;
+        } else {
+            this.health++;
+        };
+
+    }
+
+    toSring() {
+        if (this.isLegWooden) {
+            `Hello, I'm ${this.name} . I have a wooden leg and ${this.gold} golds.`
+        } else {
+            `Hello, I'm ${this.name}. I still have my real legs and ${this.gold} golds.`
+        }
+    }
+
 
 }
 
@@ -30,19 +50,11 @@ let Jack = new Pirate('Jack');
 console.log(Jack)
 
 
-//if a pirate is a captain:
 
-/* work() which increases the amount of gold possessed by that pirate by 10 and decrease the HP by 5.
-party() which increases the HP by 10.
-if the pirate is not a captain:
 
-work() which increases the amount of gold by 1 and decreases the HP by 1.
-party() which increases the HP by 1.
-toString() method:
-
-if the pirate has a wooden leg, then the string that is returned by the function must look like this:
+/* if the pirate has a wooden leg, then the string that is returned by the function must look like this:
 
 Hello, I'm Jack. I have a wooden leg and 20 golds.
 If not:
 
-Hello, I'm Jack. I still have my real legs and 20 golds. */
+Hello, I'm Jack. I still have my real legs and 20 golds.  */

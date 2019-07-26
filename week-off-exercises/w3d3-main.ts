@@ -28,6 +28,6 @@ function initializePokemon(): Pokemon[] {
 
 for (let i: number = 0; i < pokemonOfAsh.length; i++) {
     if (pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)) {
-        console.log(pokemonOfAsh[i])
+        console.log(pokemonOfAsh[i].name);
     }
 }

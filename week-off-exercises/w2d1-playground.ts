@@ -3,18 +3,15 @@
 export { };
 
 const fs = require('fs');
-
-let firstArr: string[] = ['apple', 'pear', 'melon']
-
-firstArr.forEach(function (e, i) {
-    console.log(e, i);
-});
-
 let content = fs.readFileSync('char.txt', 'utf-8');
+
 
 let contArr: string[] = content.split('\n');
 
-console.log(contArr[0]);
-console.log(contArr[1]);
-console.log(contArr[1]);
+/* content = fs.readFileSync('countchar.txt', 'utf-8');
+contArr = content.split("");
+for (let i: number = 0; i < content.length; i++) {
+    characterCount = 0;
+    currentCharacter = content[i];
 
+ */
