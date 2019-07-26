@@ -17,25 +17,3 @@ for (let i: number = 0; i < content.length; i++) {
  */
 
 
-
-export class appleMaker {
-
-    getApple(): string {
-        return `apple`;
-    }
-}
-
-let myApple: appleMaker = new appleMaker();
-
-console.log(myApple.getApple());
-
-/* import { test } from 'tape';
-import { appleMaker } from './getApple';
-
-test(t => {
-    let myApple: appleMaker = new appleMaker();
-    myApple.getApple();
-    t.equals(myApple.getApple(), "apple");
-    t.end();
-});
- */
