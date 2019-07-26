@@ -47,7 +47,7 @@ export default class Pirate {
 
 let Jack = new Pirate('Jack');
 
-console.log(Jack)
+console.log(Jack.gold)
 
 
 
