@@ -6,14 +6,12 @@ let myMatress: number[][] = [
     [7, 8, 9],
 ]
 
-const index = 0;
-
-console.log(myMatress.map(row => row[index]));
-
-/* for (let i: number = 0; i < myMatress.length; i++) {
-    for (let j: number = 0; j < myMatress.length; j++) {
-        if (myMatress[i][j] !== myMatress[j][i]) {
-
-        }
+function rotateThatShit(): number[][] {
+    let rotatedMatress: number[][] = [];
+    for (let i: number = 0; i < myMatress.length; i++) {
+        rotatedMatress.push(myMatress.map(row => row[i]));
     }
-} */
+    return rotatedMatress;
+}
+
+console.log(rotateThatShit());
