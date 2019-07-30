@@ -6,8 +6,14 @@ let myMatress: number[][] = [
     [7, 8, 9],
 ]
 
-for (let i: number = 0; i < myMatress.length; i++) {
-    for (let j: number = 0; j < myMatress.length; j++) {
+const index = 0;
 
+console.log(myMatress.map(row => row[index]));
+
+/* for (let i: number = 0; i < myMatress.length; i++) {
+    for (let j: number = 0; j < myMatress.length; j++) {
+        if (myMatress[i][j] !== myMatress[j][i]) {
+
+        }
     }
-}
+} */
