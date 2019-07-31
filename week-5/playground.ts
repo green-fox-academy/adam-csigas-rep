@@ -3,8 +3,14 @@
 //
 let mystring: string = 'k.oc.ka.krum.pli.';
 let myDestroy: any[] = ['k', /\./gi];
+//let myNewstring02: string = '';
 
-let myNewstring: string = mystring.replace(/\./gi, "");
+/* for (let i: number = 0; i < myDestroy.length; i++) {
+    mystring.replace(myDestroy[i], "");
+} */
 
-console.log(myNewstring)
+let myNewstring: string = mystring.replace(myDestroy[0], "");
+let myNewstring2: string = mystring.replace(myDestroy[1], "");
+
+console.log(myNewstring2)
 
