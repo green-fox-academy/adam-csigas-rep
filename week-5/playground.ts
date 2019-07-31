@@ -1,17 +1,19 @@
 'use strict';
+let mystring: string = 'k.oc.ka.krum.pli.';
+
 
 
 
 function deleteCharacter(): string {
     let mystring: string = 'k.oc.ka.krum.pli.';
-    let myDestroy: any[] = [/k/gi, /\./gi];
+    let myDestroy: RegExp[] = [/k/gi, /\./gi];
     for (let i: number = 0; i < myDestroy.length; i++) {
         mystring = mystring.replace(myDestroy[i], "");
     }
     return mystring;
 }
 
-console.log(deleteCharacter())
+console.log(deleteCharacter());
 
 
 

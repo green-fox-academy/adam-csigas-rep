@@ -8,24 +8,16 @@ let inputArray: string[] = ['fuck', 'bloody', 'cock', 'shit', 'fucker', 'fucksti
 let content = fs.readFileSync('swearword.txt', 'utf-8');
 let contentBeArray: string[] = content.toString().toLowerCase().split(' ');
 
+let swearWords: string[] = [];
+for (let i: number = 0; i < inputArray.length; i++) {
+    inputArray[i];
+    for (let j: number = 0; j < contentBeArray.length; j++) {
+        if (contentBeArray[j] === inputArray[i]) {
+            swearWords.push(contentBeArray[j]);
+        }
+    }
 
 
-console.log(contentBeArray)
+}
 
-
-/*
-
-Swear words
-Write a method which can read and parse a file containing not so family friendly text. The method must remove all the given words from the file and return the amount of the removed words.
-
-Example
-Example file can be found here.
-
-Input
-
-['fuck', 'bloody', 'cock', 'shit', 'fucker', 'fuckstick', 'asshole', 'dick', 'piss', 'cunt']
-Output
-
-17
-
-*/
+console.log(swearWords)

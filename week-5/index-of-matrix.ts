@@ -15,3 +15,6 @@ for (let i: number = 0; i < myMatress.length; i++) {
     }
     rotatedMatress2.push(row)
 }
+
+console.table(myMatress)
+console.table(rotatedMatress2)
