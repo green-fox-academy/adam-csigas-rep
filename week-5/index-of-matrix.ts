@@ -6,10 +6,12 @@ let myMatress: number[][] = [
     [7, 8, 9],
 ]
 
-//let rotatedMatress2: number[][] = [];
+let rotatedMatress2: number[][] = [];
 
-for (let i: number = 0; i <= myMatress.length; i++) {
-    for (let j: number = 0; j <= myMatress.length; j++) {
-        console.log(i, j);
+for (let i: number = 0; i < myMatress.length; i++) {
+    let row: number[] = [];
+    for (let j: number = myMatress.length - 1; j >= 0; j--) {
+        row.push(myMatress[j][i])
     }
+    rotatedMatress2.push(row)
 }

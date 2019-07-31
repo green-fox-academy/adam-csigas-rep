@@ -3,7 +3,16 @@ export { }
 
 declare function require(path: string): any;
 const fs = require('fs');
-let content = fs.readFileSync('countchar.txt', 'utf-8');
+
+let inputArray: string[] = ['fuck', 'bloody', 'cock', 'shit', 'fucker', 'fuckstick', 'asshole', 'dick', 'piss', 'cunt'];
+
+let content = fs.readFileSync('swearword.txt', 'utf-8');
+
+let contentBeArray: string[] = content.toString().toLowerCase().split(' ');
+
+
+
+console.log(contentBeArray)
 
 
 /*
