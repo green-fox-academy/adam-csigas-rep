@@ -15,7 +15,10 @@ let myMatress: number[][] = [
 function rotateThatShit(): number[][] {
     let rotatedMatress: number[][] = [];
     for (let i: number = myMatress.length - 1; i >= 0; i--) {
-        rotatedMatress.push(myMatress.map(row => row[i]));
+        rotatedMatress.push(myMatress.map(function (row) {
+            return row[i];
+        }));
+
     }
     return rotatedMatress;
 }
