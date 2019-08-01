@@ -3,7 +3,7 @@
 import { Employee } from "./employee";
 
 
-class Chef extends Employee{
+export class Chef extends Employee{
     mealsAndTimes : object ={};
 
     constructor(name: string = 'JonDoe', experience: number = 0){
@@ -26,11 +26,11 @@ class Chef extends Employee{
     }
 
 }
-
+/* 
 let myChef : Chef = new Chef();
 
 console.log(myChef.meal('paprikaskrumpli'));
 console.log(myChef.meal('paprikaskrumpli'));
 console.log(myChef.meal('paprikaskrumpli'));
 
-console.log(myChef)
+console.log(myChef) */

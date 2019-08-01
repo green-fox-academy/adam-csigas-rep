@@ -11,7 +11,7 @@ import { Employee } from "./employee";
         - Whenever`have a meeting` is invoked, the`moodLevel` should decrease by the managers`experience`
  */
 
- class Manager extends Employee {
+ export class Manager extends Employee {
     moodLevel : number = 400;
 
      constructor(name: string = 'JonDoe', experience: number = 0) {
@@ -22,6 +22,7 @@ import { Employee } from "./employee";
 
      work() : void {
          this.experience++;
+         this.meeting();
      }
 
      meeting() : void {
@@ -29,7 +30,7 @@ import { Employee } from "./employee";
      }
  }
 
- let myManager: Manager = new Manager();
+ /* let myManager: Manager = new Manager();
 
  myManager.work();
  myManager.meeting();
@@ -37,4 +38,4 @@ import { Employee } from "./employee";
 myManager.meeting();
  console.log(myManager);
 myManager.meeting();
- console.log(myManager);
+ console.log(myManager); */
