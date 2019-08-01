@@ -11,32 +11,47 @@ export class Animal {
         this.isHealthy = isHealthy;
     }
 
-    heal(animalName : Animal){
-         animalName.isHealthy === true;
+    heal(){
+             this.isHealthy = true;
     }
 
-    isAdoptable(animalName : Animal) : boolean {
+    isAdoptable() : boolean {
         let canIAdopt : boolean = true;
-        if(animalName.isHealthy){
+        if(this.isHealthy){
             return canIAdopt;
         }
         return canIAdopt = false;
     }
     
-    toString(animalName : Animal) : string {
-        let answerToAdopt : string = `${animalName} is healthy, and adoptable.`
-        if(this.isAdoptable(animalName)){
+    toString() : string {
+        let answerToAdopt : string = `${this.ownersName} is healthy, and adoptable.`
+        if(this.isAdoptable()){
             return answerToAdopt;
         }
-        return answerToAdopt = `${animalName} is not healthy <heal cost> , and not adoptable.`
+        return answerToAdopt = `${this.ownersName} is not healthy, for this reason not adoptable. The healing will cost: ${this.healCost} $ in total.`
     }
 }
 
-let Cat: Animal = new Animal(Math.floor(Math.random()*7));
-let Dog: Animal = new Animal(Math.floor(Math.random()*8)+1);
-let Parrot: Animal = new Animal(Math.floor(Math.random()*7)+4);
+let Cat: Animal = new Animal(Math.floor(Math.random()*7),'Cat');
+let Dog: Animal = new Animal(Math.floor(Math.random()*8)+1,'Dog');
+let Parrot: Animal = new Animal(Math.floor(Math.random()*7)+4,'Parrot');
 
 console.log(Cat);
 console.log(Dog);
 console.log(Parrot);
 
+console.log(Cat.isAdoptable());
+console.log(Dog.isAdoptable());
+console.log(Parrot.isAdoptable());
+
+console.log(Cat.toString());
+console.log(Dog.toString());
+console.log(Parrot.toString());
+
+console.log(Cat.heal());
+console.log(Dog.heal());
+console.log(Parrot.heal());
+
+console.log(Cat);
+console.log(Dog);
+console.log(Parrot);
