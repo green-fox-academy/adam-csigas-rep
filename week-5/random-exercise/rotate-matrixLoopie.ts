@@ -6,16 +6,16 @@ let mahMatrix: number[][] = [
     [7, 8, 9],
 ]
 
-function loopieWillRotate(): number[][] {
+function loopieWillRotate(mymatrix : number [][]): number[][] {
     let mahRotatedMatrix: number[][] = [];
-    for (let i: number = 0; i < mahMatrix.length; i++) {
+    for (let i: number = 0; i < mymatrix.length; i++) {
         let row: number[] = [];
-        for (let j: number = mahMatrix.length - 1; j >= 0; j--) {
-            row.push(mahMatrix[j][i]);
+        for (let j: number = mymatrix.length - 1; j >= 0; j--) {
+            row.push(mymatrix[j][i]);
         }
         mahRotatedMatrix.push(row)
     }
     return mahRotatedMatrix;
 }
 
-console.log(loopieWillRotate());
+console.log(loopieWillRotate(mahMatrix));
