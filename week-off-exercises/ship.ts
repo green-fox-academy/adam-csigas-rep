@@ -1,6 +1,7 @@
 'use strict';
 
 import Pirate from "./pirate";
+import { createWriteStream } from "fs";
 
 class Ship {
     crew: Pirate[];
@@ -10,7 +11,11 @@ class Ship {
     }
 
     addPirate(newPirate: Pirate): void {
-
+        if (newPirate.isCaptain === false) {
+            this.crew.push(newPirate);
+        } else if (newPirate.isCaptain === true && this.checkCaptain() === false) {
+            this.crew.push(newPirate);
+        } else "This ship has a captain already."
     }
 
     checkCaptain(): boolean {
@@ -24,15 +29,49 @@ class Ship {
         return hasCaptain;
     }
 
+    getPoorPirates(): string[] {
+        let PoorPiratesName: string[] = [];
+        for (let i: number = 0; i < this.crew.length; i++) {
+            let PoorPirateCheck: Pirate = this.crew[i];
+            if (PoorPirateCheck.isLegWooden && PoorPirateCheck.gold < 15) {
+                PoorPiratesName.push(PoorPirateCheck.name);
+            }
+        }
+        return PoorPiratesName;
+    }
 }
+
+let HolyShip: Ship = new Ship();
+
+let pirate01: Pirate = new Pirate('PoorJohn1', 14);
+let pirate02: Pirate = new Pirate('RichJohn2', 333);
+let pirate03: Pirate = new Pirate('PoorJohn3', 13);
+let pirate04: Pirate = new Pirate('RichJohn4', 444);
+let pirate05: Pirate = new Pirate('PoorJohn5', 12);
+let pirate06: Pirate = new Pirate('RichJohn6', 555);
+console.log(pirate01);
+console.log(pirate02);
+console.log(pirate03);
+console.log(pirate04);
+console.log(pirate05);
+console.log(pirate06);
+
+HolyShip.addPirate(pirate01);
+HolyShip.addPirate(pirate02);
+HolyShip.addPirate(pirate03);
+HolyShip.addPirate(pirate04);
+HolyShip.addPirate(pirate05);
+HolyShip.addPirate(pirate06);
+
+console.log(HolyShip);
+
+console.log(HolyShip.getPoorPirates());
+
 
 /*
 
- - It should have a list of pirates.
- - You must be able to add new pirates to the ship. It must have only one captain!
- - You must create the following methods:
- - `getPoorPirates()` which returns a list of names containing the pirates that
-    - have a wooden leg and have less than 15 golds
+
+
  - `getGolds()` which returns the sum of gold owned by the pirates of that particular ship
  - `lastDayOnTheShip()` which calls the pirates' `party()` method.
  - `prepareForBattle()` which calls
