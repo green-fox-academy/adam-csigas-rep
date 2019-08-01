@@ -14,6 +14,12 @@ export abstract class Employee {
     name: string;
     experience: number;
 
+    constructor(name: string = 'JonDoe', experience: number = 0){
+        this.name = name;
+        this.experience = experience;
+    }
+
     abstract work();
+    
 }
 
