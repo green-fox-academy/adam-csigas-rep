@@ -1,18 +1,20 @@
 'use strict';
 
 export class Animal {
+    animalsName: string;
     ownersName : string;
     isHealthy : boolean;
     healCost : number;
 
-    constructor(healcost: number, ownersName: string ='JonDoe', isHealthy: boolean = (Math.random() <= 0.5)){
+    constructor(healcost: number, animalsName: string = 'Animal', ownersName: string ='JonDoe', isHealthy: boolean = (Math.random() <= 0.5)){
         this.healCost = healcost;
+        this.animalsName = animalsName;
         this.ownersName = ownersName;
         this.isHealthy = isHealthy;
     }
 
     heal(){
-             this.isHealthy = true;
+      this.isHealthy = true;
     }
 
     isAdoptable() : boolean {
@@ -24,11 +26,11 @@ export class Animal {
     }
     
     toString() : string {
-        let answerToAdopt : string = `${this.ownersName} is healthy, and adoptable.`
+        let answerToAdopt : string = `${this.animalsName} is healthy, and adoptable.`
         if(this.isAdoptable()){
             return answerToAdopt;
         }
-        return answerToAdopt = `${this.ownersName} is not healthy, for this reason not adoptable. The healing will cost: ${this.healCost} $ in total.`
+        return answerToAdopt = `${this.animalsName} is not healthy, for this reason not adoptable. The healing will cost: ${this.healCost} $ in total.`
     }
 }
 
