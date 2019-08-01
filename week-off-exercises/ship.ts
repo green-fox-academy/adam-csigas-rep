@@ -1,7 +1,6 @@
 'use strict';
 
 import Pirate from "./pirate";
-import { createWriteStream } from "fs";
 
 class Ship {
     crew: Pirate[];
@@ -55,7 +54,16 @@ class Ship {
             allParty.party();
         }
     }
-    //- `lastDayOnTheShip()` which calls the pirates' `party()` method.
+
+    prepareForBattle() {
+        for (let i: number = 0; i < this.crew.length; i++) {
+            let allWork: Pirate = this.crew[i];
+            for (let j: number = 0; j < 5; j++) {
+                allWork.work();
+            }
+        }
+        this.lastDayOnTheShip();
+    }
 }
 
 let HolyShip: Ship = new Ship();
@@ -81,15 +89,6 @@ HolyShip.addPirate(pirate05);
 HolyShip.addPirate(pirate06);
 
 console.log(HolyShip);
-
-console.log(HolyShip.getPoorPirates());
-console.log(HolyShip.getGolds());
-HolyShip.lastDayOnTheShip();
+HolyShip.prepareForBattle()
 console.log(HolyShip);
 
-
-/*
- - `prepareForBattle()` which calls
-    - the pirates' `work()` method 5 times
-    - then the ship's `lastDayOnTheShip()` method.
-*/
