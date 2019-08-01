@@ -20,17 +20,6 @@ test(t => {
     } else {
         t.equals(pirate01.isLegWooden, false);
     }
-
-    if (pirate01.isCaptain) {
-        pirate01.work()
-        t.equals(pirate01.gold, pirate01.gold);
-        t.equals(pirate01.health, pirate01.health);
-    } else {
-        pirate01.work()
-        t.equals(pirate01.gold, pirate01.gold);
-        t.equals(pirate01.health, pirate01.health);
-    }
-
     t.end();
 });
 

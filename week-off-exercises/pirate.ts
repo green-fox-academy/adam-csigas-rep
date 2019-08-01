@@ -50,13 +50,3 @@ let Jack = new Pirate('Jack');
 console.log(Jack.health)
 Jack.work()
 console.log(Jack.health)
-
-
-
-
-/* if the pirate has a wooden leg, then the string that is returned by the function must look like this:
-
-Hello, I'm Jack. I have a wooden leg and 20 golds.
-If not:
-
-Hello, I'm Jack. I still have my real legs and 20 golds.  */
