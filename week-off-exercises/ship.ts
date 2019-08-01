@@ -48,6 +48,14 @@ class Ship {
         }
         return SummedGold;
     }
+
+    lastDayOnTheShip() {
+        for (let i: number = 0; i < this.crew.length; i++) {
+            let allParty: Pirate = this.crew[i];
+            allParty.party();
+        }
+    }
+    //- `lastDayOnTheShip()` which calls the pirates' `party()` method.
 }
 
 let HolyShip: Ship = new Ship();
@@ -76,16 +84,12 @@ console.log(HolyShip);
 
 console.log(HolyShip.getPoorPirates());
 console.log(HolyShip.getGolds());
+HolyShip.lastDayOnTheShip();
+console.log(HolyShip);
 
 
 /*
-
-
-
-
- - `lastDayOnTheShip()` which calls the pirates' `party()` method.
  - `prepareForBattle()` which calls
     - the pirates' `work()` method 5 times
     - then the ship's `lastDayOnTheShip()` method.
-
 */
