@@ -39,6 +39,15 @@ class Ship {
         }
         return PoorPiratesName;
     }
+
+    getGolds(): number {
+        let SummedGold: number = 0;
+        for (let i: number = 0; i < this.crew.length; i++) {
+            let GoldOfThisPirate: Pirate = this.crew[i];
+            SummedGold += GoldOfThisPirate.gold;
+        }
+        return SummedGold;
+    }
 }
 
 let HolyShip: Ship = new Ship();
@@ -66,13 +75,14 @@ HolyShip.addPirate(pirate06);
 console.log(HolyShip);
 
 console.log(HolyShip.getPoorPirates());
+console.log(HolyShip.getGolds());
 
 
 /*
 
 
 
- - `getGolds()` which returns the sum of gold owned by the pirates of that particular ship
+
  - `lastDayOnTheShip()` which calls the pirates' `party()` method.
  - `prepareForBattle()` which calls
     - the pirates' `work()` method 5 times
