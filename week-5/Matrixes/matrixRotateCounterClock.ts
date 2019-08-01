@@ -1,4 +1,6 @@
 'use strict';
+export {};
+
 
 let myMatrix : number[][] = [
     [1,2,3],
