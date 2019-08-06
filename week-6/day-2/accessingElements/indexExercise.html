@@ -16,12 +16,6 @@
 
     <!-- You can work in the html or in a separate js file. Like:
    
-      2. store 'The Businessman' and 'The Lamplighter'
-      in the 'businessLamp' variable.
-      console.log each of them.
-      3. store 'The King' and 'The Conceited Man'
-      in the 'conceitedKing' variable.
-      alert them one by one.
       4. store 'The King', 'The Conceited Man' and 'The Lamplighter'
       in the 'noBusiness' variable.
       console.log each of them.
@@ -34,7 +28,16 @@
     console.log(king)
     let businessLamp = document.querySelectorAll('.big').forEach(element => console.log(element.innerText));
     businessLamp;
-    let conceitedKing = document
+    let conceitedKing = document.querySelectorAll('.container');
+        
+    conceitedKing.forEach(i => {
+        let splitted = i.innerText.split('\n');
+        splitted.forEach(e => alert(e));
+    });
+
+    let noBusiness = document.querySelectorAll('.asteroid');
+    noBusiness.forEach(e => console.log(e.innerHTML));
+
     
     </script>
 </body>
