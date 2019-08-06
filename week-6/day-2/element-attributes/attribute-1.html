@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: Attributes</title>
+</head>
+
+<body>
+
+    <img src= "https://i.imgur.com/1pHchvA.jpg"  width="200" height="250">
+    <a href="http://www.themostamazingwebsiteontheinternet.com/">The Best Website Ever</a>
+    <button>Click me!</button>
+    <button class="this-one">Click me!</button>
+
+    <!-- You can work in the html or in a separate js file. Like:
+    <script>
+
+      Disable the second button.
+      Replace its text with 'Don't click me!'.
+    </script>
+    OR
+    <script src="attribute-1.js"></script> -->
+
+    <script>
+    let imgSource = document.querySelector('img').src;
+    console.log(imgSource);
+    let linkRedirect = document.querySelector('a').href;
+    linkRedirect = 'https://www.greenfoxacademy.com/';
+    console.log(linkRedirect)
+    let secondButtonDisabler = document.getElementsByClassName('this-one');
+    secondButtonDisabler.disabled = true;
+        
+    </script>
+
+</body>
+
+</html>
