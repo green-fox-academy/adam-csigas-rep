@@ -2,7 +2,7 @@
 
 import { Toy } from "./toy";
 
-export class dottedBall extends Toy {
+export class DottedBall extends Toy {
     color: string;
     size : number;
 
@@ -12,5 +12,5 @@ export class dottedBall extends Toy {
     }
 }
 
-/* let myDotted : Toy = new dottedBall('red',100);
-console.log(myDotted) */
+let myDotted : Toy = new DottedBall('red',100);
+console.log(myDotted) 

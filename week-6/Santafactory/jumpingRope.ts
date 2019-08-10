@@ -2,7 +2,7 @@
 
 import { Toy } from "./toy";
 
-export class dottedBall extends Toy {
+export class JumpingRope extends Toy {
     color: string;
     size: number;
 
