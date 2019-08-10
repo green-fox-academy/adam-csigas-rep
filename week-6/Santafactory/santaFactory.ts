@@ -8,11 +8,11 @@ import { DottedBall } from "./dottedBall";
 export class SantaFactory {
     balance : number;
 
-    constructor(balance : number = 200){
-        this.balance = balance;
+    constructor(){
+        this.balance = 200;
     }
 
-    produce(name : string, color : string, size? : number) {
+    produce(name : string, color : string, size? : number) : Toy {
         let result : Toy;
         if(name === 'Doll' && this.balance >= 25){
             result = new Doll(color);
@@ -27,8 +27,13 @@ export class SantaFactory {
             this.balance -= result.cost;
             return result;
         }else{
-            return `Factory's balance is ${this.balance} or the toy not exist.`
+            
         }
     }
 }
 
+let newsanta : SantaFactory = new SantaFactory();
+
+console.log(newsanta.produce('Doll','haha',100))
+
+console.log(newsanta)
