@@ -21,8 +21,5 @@ When a user visits the application
 
 */
 for( let i = 0; i< cocktails.length; i++){
-    for(let j = 0; j < cocktails[i].contains.length; j++){
-
-        console.log(cocktails[i])
-    }
+        console.log(cocktails[i]);
 }

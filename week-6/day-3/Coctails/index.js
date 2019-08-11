@@ -28,6 +28,11 @@ app.get('/', (req, res) => {
             }
         }
     }
+    if( toDisplayCocktail[0] === undefined){
+        res.render('home',{title: "Cocktails on offer" , cocktails: cocktails})
+    } else {
+        res.render('home', {title: `Cocktails with ${req.query.alcohol}`, cocktails : cocktails })
+    }
     res.render('home', {
         coctail: req.query.toDisplayCocktail
     });
