@@ -16,12 +16,12 @@ let processStudents = function (data, callback) {
             }
         }
     }
-}
+};
 
 processStudents(students, function (obj) {
     if (obj.score > 60) {
         console.log(obj.name + 'passed')
     }
-})
+});
 
 
