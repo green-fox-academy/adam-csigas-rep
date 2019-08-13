@@ -1,9 +1,9 @@
 'use strict';
 
-const mapWith = (array, callback) => {
+const mapWith = (arrayElements, callback) => {
     let output = [];
-    for (let i = 0; i < array.length; i++) {
-        output.push(callback(array[i]));
+    for (let i = 0; i < arrayElements.length; i++) {
+        output.push(callback(arrayElements[i]));
     }
     return output;
 }
@@ -18,18 +18,14 @@ console.log(mapWith([1, 2, 3], addOne)); //expected result: [2, 3, 4] ... Works.
 
 // Create a callback function which removes every second character from a string
 const words = ['map', 'reduce', 'filter'];
-const removeSecondLetter = (array) => {
+const removeSecondLetter = (arrayElements) => {
     let splittedWords = [];
-    for (let i = 0; i < words.length; i++) {
-        let splittedChar = [];
-        for (let j = 0; j < words[i].length; j++) {
-            if (j % 2 == 0) {
-                splittedChar.push(words[i][j]);
-            }
+    for (let i = 0; i < arrayElements.length; i++) {
+        if (i % 2 == 0) {
+            splittedWords.push(arrayElements[i]);
         }
-        splittedWords.push(splittedChar.join(''))
     }
-    return splittedWords
+    return splittedWords.join('')
 }
 
 console.log(mapWith(words, removeSecondLetter));
