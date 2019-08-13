@@ -1,9 +1,9 @@
 'use strict';
 
-const mapWith = (arrayElements, callback) => {
+const mapWith = (array, callback) => {
     let output = [];
-    for (let i = 0; i < arrayElements.length; i++) {
-        output.push(callback(arrayElements[i]));
+    for (let i = 0; i < array.length; i++) {
+        output.push(callback(array[i]));
     }
     return output;
 }
