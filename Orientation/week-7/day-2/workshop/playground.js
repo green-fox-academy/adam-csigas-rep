@@ -1,14 +1,7 @@
-let words = ['map', 'reduce', 'filter'];
-
-let splittedWords = [];
-for (let i = 0; i < words.length; i++) {
-    let splittedChar = [];
-    for (let j = 0; j < words[i].length; j++) {
-        if (j % 2 == 0) {
-            splittedChar.push(words[i][j]);
-        }
-    }
-    splittedWords.push(splittedChar.join(''))
+const isPrime = num => {
+    for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+        if (num % i === 0) return false;
+    return num > 1;
 }
 
-console.log(splittedWords)
+console.log(isPrime(5))
