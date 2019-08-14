@@ -12,6 +12,15 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+function factorial(num) {
+    let fact = 1;
+    for (let i = 0; i < num; i += 1) {
+        fact *= i + 1;
+    }
+    return fact;
+}
+
+
 app.get('/doubling', (req, res) => {
     if (isNaN(Number(req.query.input))) {
         res.json({
@@ -62,7 +71,14 @@ app.post('/dountil/:action', (req, res) => {
             "result": (req.body.until*(req.body.until+1))/2
         })
     }
+    if (req.params.action === "factor") {
+        res.json({
+            "result": factorial(req.body.until)
+        })
+    }
 });
+
+
 
 
 
