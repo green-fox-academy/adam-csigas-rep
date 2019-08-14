@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 app.use(express.static('assets'));
 app.use(express.json());
@@ -13,12 +13,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/doubling', (req, res) => {
-    
-    res.json({
-        "received": Number(req.query.input),
-        "result": Number(req.query.input * 2)
-    })
-    
+    if (isNaN(Number(req.query.input))) {
+        res.json({
+            "error": "Please provide an input!"
+        })
+    } else {
+        res.json({
+            "received": Number(req.query.input),
+            "result": Number(req.query.input * 2)
+        })
+    }
+
 });
 
 
