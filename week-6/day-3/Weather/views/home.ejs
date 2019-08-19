@@ -10,7 +10,7 @@
     <h1>Forecast</h1>
     <header><link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet"></header>
     <% for (let i = 0 ; i < dashBoard.length ; i ++ ){ %>
-    <p><%= dashBoard[i].city %> <%= dashBoard[i].weather[0].temp %></p> <img src=<%= dashBoard[i].weather[0].icon %> height=40px width=40px>
+    <p><%= dashBoard[i].city %> <%= dashBoard[i].weather[i].temp %> °C</p> <img src=<%= dashBoard[i].weather[0].icon %> height=40px width=40px>
     <p><%= dashBoard[i].location %></p>
     <% } %>
 </body>

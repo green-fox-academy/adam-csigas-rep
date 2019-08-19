@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3010;
 
+app.set('view engine', 'ejs');
 app.use(express.static('static'));
 app.use(express.static('images'));
 
@@ -63,14 +64,28 @@ const forecasts = [
     },
 ];
 
-app.set('view engine', 'ejs');
+function citiesDailyWeather(cities) {
+    let dailyWeather = [];
+    for (let i = 0; i < forecasts.length; i++) {
+        if (cities === forecasts[i].city)
+            dailyWeather = forecasts[i].weather;
+    }
+    return dailyWeather;
+}
 
-// home page
+
 app.get('/', (req, res) => {
-    res.render('home', {dashBoard : forecasts})
-    
+    let citiesToDisplay = [];
+    for (let i = 0; i < forecasts.length; i++) {
+        if (req.query.cities === forecasts[i].city) {
+            citiesToDisplay.push(forecasts[i])
+        }
+    } if (citiesToDisplay[0] === undefined) {
+        res.render('home', { dashBoard: forecasts });
+    } else {
+        res.render('details', { city: `${req.query.cities}`, dailyBoard: citiesDailyWeather(req.query.cities), });
+    }
 });
-
 
 
 
