@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1> <%=title%> </h1>
 
     <ul>
         
         <% for( let i = 0 ; i < cocktails.length ; i++){ %>
-            <li> <%= cocktails[i].name %> </li>
+            <li> <%= cocktails[i].name %> <%= cocktails[i].price %></li>
        <% } %>
 
     </ul>

@@ -1,3 +1,4 @@
 *.avi
 *.mp4
 hemagicwand
+node_modules

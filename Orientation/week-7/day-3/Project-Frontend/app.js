@@ -1,3 +1,4 @@
+'use strict';
 const express = require('./node_modules/express');
 const path = require('path');
 
