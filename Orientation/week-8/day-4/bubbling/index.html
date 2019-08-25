@@ -47,16 +47,8 @@
         let yCor = 0;
         let size = 200;
 
-
-        /*  let up = document.querySelectorAll('button')[0];
-         let down = document.querySelectorAll('button')[1];
-         let left = document.querySelectorAll('button')[2];
-         let right = document.querySelectorAll('button')[3];
-         let zoomIN = document.querySelectorAll('button')[4];
-         let zoomOUT = document.querySelectorAll('button')[5]; */
-
         let nav = document.querySelector('nav');
-        nav.addEventListener('click', function (event) {
+        function pictureMover() {
             switch (event.target.getAttribute('data-direction')) {
                 case 'up':
                     document.querySelector('div').style.backgroundPositionY = `${yCor += 20}px`;
@@ -77,70 +69,11 @@
                     document.querySelector('div').style.backgroundSize = `${size *= 0.8}%`;
                     break;
             }
-        })
-
-        console.log(nav)
-
-        /* switch (e.target.getAttribute('data-direction')) {
-            case up:
-                let foo = document.querySelector('div').style.backgroundPositionY = `${yCor += 20}px`;
-                up.addEventListener("click", foo);
-                break;
-        } */
-
-        //Zoom in
-        function zoomThePictureOUT() {
-            document.querySelector('div').style.backgroundSize = `${size *= 0.8}%`;
         }
-        zoomOUT.addEventListener("click", zoomThePictureOUT);
 
-        //Zoom out
-        function zoomThePictureIN() {
-            document.querySelector('div').style.backgroundSize = `${size *= 1.2}%`;
-        }
-        zoomIN.addEventListener("click", zoomThePictureIN);
-
-        //Up
-        function moveThePictureUP() {
-            document.querySelector('div').style.backgroundPositionY = `${yCor += 20}px`;
-        }
-        up.addEventListener("click", moveThePictureUP);
-
-        //Down
-        function moveThePictureDOWN() {
-            document.querySelector('div').style.backgroundPositionY = `${yCor -= 20}px`;
-        }
-        down.addEventListener("click", moveThePictureDOWN);
-
-        //Left
-        function moveThePictureLEFT() {
-            document.querySelector('div').style.backgroundPositionX = `${xCor += 20}px`;
-        }
-        left.addEventListener("click", moveThePictureLEFT);
-
-        //right
-        function moveThePictureRIGHT(e) {
-            document.querySelector('div').style.backgroundPositionX = `${xCor -= 20}px`;
-            console.log(e)
-
-        }
-        right.addEventListener("click", moveThePictureRIGHT);
-
-
-
+        nav.addEventListener('click',pictureMover);
     </script>
-    <!-- You can work in the html or in a separate js file. Like:
-        <script>
-            Here is an image inspector, but the buttons are not implemented yet, that will
-      be your task!
-       - the nav buttons (up, down, left, right) move the background by 10px
-       - the zoom buttons increase/decrease the image by 20%
-       - attach only two event listeners to the nav element
-         - one for navigation
-         - one for zooming
-    </script>
-    OR
-    <script src="bubbling.js"></script> -->
+
 </body>
 
 </html>
