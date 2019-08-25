@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delayed click</title>
+</head>
+
+<body>
+    <button>Click here</button>
+    <p>This text might change! </p>
+    <script>
+        'use strict';
+
+        let btn = document.querySelector('button');
+        let p = document.querySelector('p');
+        let delay = 3000;
+
+        function delayedClickOutput() {
+            p.innerText = 'I sense change is happening right now... Wait!'
+            setTimeout(() => {
+                p.innerText = `By clicking you've wasted ${delay/1000} seconds of your life. Now go back to work.`;
+            }, delay);
+        }
+        btn.addEventListener('click', delayedClickOutput);
+        
+    </script>
+</body>
+
+</html>
