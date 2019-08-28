@@ -6,9 +6,9 @@ const PORT = 3000;
 
 app.set('view engine', 'ejs');
 
-app.get('/greet/', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home', {
-        name: req.query.name || 'beautiful person'
+        name: req.query.name || 'Guest'
     });
 });
 
