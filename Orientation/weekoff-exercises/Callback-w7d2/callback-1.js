@@ -25,8 +25,8 @@ const words = ['map', 'reduce', 'filter'];
 
 const removeSecondLetter = (character) => {
     let modifiedWords = [];
-    for(let i = 0; i < character.length; i++){
-        if(i %2 === 0){
+    for (let i = 0; i < character.length; i++) {
+        if (i % 2 === 0) {
             modifiedWords.push(character[i])
         }
     }
