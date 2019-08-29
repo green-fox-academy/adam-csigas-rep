@@ -18,7 +18,7 @@
     // Extra: create an interval which will update the remaining seconds in the display
     'use strict';
     let remainingTime = Number(document.querySelector('div').innerText);
-    let display = document.querySelector('div').innerText;
+    // let display = document.querySelector('div').innerText; why is it not working tho?
     let btn = document.querySelector('button');
 
     let timer = setInterval(() => {
@@ -26,6 +26,7 @@
             document.querySelector('div').innerText = remainingTime--;
         } else {
             document.querySelector('div').innerText = 'Bomb exploded!';
+            clearInterval(timer);
         }
     }, 1000);
 
