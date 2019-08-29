@@ -23,5 +23,15 @@ console.log(mapWith([1, 2, 3], addOne));
 
 const words = ['map', 'reduce', 'filter'];
 
-//console.log(mapWith(words, removeSecondLetter));
+const removeSecondLetter = (character) => {
+    let modifiedWords = [];
+    for(let i = 0; i < character.length; i++){
+        if(i %2 === 0){
+            modifiedWords.push(character[i])
+        }
+    }
+    return modifiedWords.join('')
+}
+
+console.log(mapWith(words, removeSecondLetter));
 // expected result: ['mp','rdc', 'fle']
