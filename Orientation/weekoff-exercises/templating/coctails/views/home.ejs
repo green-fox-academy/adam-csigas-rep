@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Cocktails app</title>
+</head>
+
+<body>
+    <h1><%= title %></h1>
+
+    <a href=""> All </a>
+
+    <% alcohols.forEach(e => { %>
+    <a href=""> <%= e %> </a>
+    <% }); %>
+
+    <h2>Names</h2>
+    <ul>
+        <% cocktailList.forEach(e => { 
+            if(e.isAlcoholic) { %>
+        <li> <%= e.name %> <br> <%= e.contains %> </li>
+        <% }else{ %>
+        <li> <%= `${e.name} (non-alcoholic)` %> <br> <%= e.contains %> </li>
+        <% } %>
+
+        <% }); %>
+    </ul>
+    <h2>Prices</h2>
+    <ul>
+        <% cocktailList.forEach(e => { %>
+        <li> <%= e.price %> Ft </li>
+        <% }); %>
+    </ul>
+
+
+
+</body>
+
+</html>

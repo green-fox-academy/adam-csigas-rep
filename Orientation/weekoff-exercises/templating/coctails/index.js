@@ -1,16 +1,16 @@
 'use strict';
 
 const express = require('express');
+const todoController = require('./controllers/coctails');
 const app = express();
 const PORT = 3000;
 
-app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('home', {
-        name: req.query.name || 'Guest'
-    });
-});
+app.set('view engine', 'ejs');
+app.use('/static', express.static('static'));
+
+todoController(app);
+
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);

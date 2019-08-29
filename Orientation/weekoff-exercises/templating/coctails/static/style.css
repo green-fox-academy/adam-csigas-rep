@@ -1,0 +1,31 @@
+a {
+    font-size: 25px;
+    line-height: 0.1em;
+    display: inline-block;
+    text-decoration: underline;
+    padding: 6px;
+    margin: 4px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+th {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 18px;
+    margin: 10px;
+}
+
+body {
+  width: 600px;
+  margin: auto;
+  padding: 0px;
+}
+
+td {
+    display: block;
+}
