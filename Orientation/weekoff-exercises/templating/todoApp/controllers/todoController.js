@@ -1,7 +1,8 @@
 module.exports = function(app){
     app.get('/', (req, res) => {
         res.render('home', {
-            title: 'Hello world again!'
+            title : 'Things to do today',
+            todo : ['get up', 'survive', 'go back to bed']
         });
     });
 }

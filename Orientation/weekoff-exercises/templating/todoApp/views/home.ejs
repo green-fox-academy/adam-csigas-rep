@@ -6,5 +6,11 @@
 </head>
 <body>
     <h1><%= title %></h1>
+
+    <ul>
+        <% todo.forEach(e => { %>
+        <li><%= e %> </li>
+        <% }); %>
+    </ul>
 </body>
 </html>
