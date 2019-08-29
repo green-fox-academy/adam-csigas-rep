@@ -10,11 +10,11 @@
 <body>
     <h1><%= title %></h1>
 
-    <a href=""> All </a>
-
-    <% alcohols.forEach(e => { %>
-    <a href=""> <%= e %> </a>
-    <% }); %>
+    <a href="http://localhost:3000">All</a>
+    <a href="http://localhost:3000/?alcohol=rum">Rum</a>
+    <a href="http://localhost:3000/?alcohol=tequila">Tequila</a>
+    <a href="http://localhost:3000/?alcohol=gin">Gin</a>
+    <a href="http://localhost:3000/?alcohol=vodka">Vodka</a>
 
     <h2>Names</h2>
     <ul>
@@ -33,7 +33,7 @@
         <li> <%= e.price %> Ft </li>
         <% }); %>
     </ul>
-
+    
 
 
 </body>
