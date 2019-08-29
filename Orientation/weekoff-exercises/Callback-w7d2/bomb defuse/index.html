@@ -13,9 +13,6 @@
     <button>Defuse</button>
 </body>
 <script>
-    // Create a timeout that will set the display to "Bomb exploded" in 10 seconds
-    // If you click on the button set the display to "Bomb defused" and stop the timeout
-    // Extra: create an interval which will update the remaining seconds in the display
     'use strict';
     let remainingTime = Number(document.querySelector('div').innerText);
     // let display = document.querySelector('div').innerText; why is it not working tho?
@@ -31,9 +28,11 @@
     }, 1000);
 
     function defuse() {
-        clearInterval(timer);
-        document.querySelector('div').innerText = 'Bomb defused!';
-    }
+        if (document.querySelector('div').innerText !== 'Bomb exploded!') {
+            clearInterval(timer);
+            document.querySelector('div').innerText = 'Bomb defused!';
+        }
+    };
 
     btn.addEventListener('click', defuse);
 </script>
