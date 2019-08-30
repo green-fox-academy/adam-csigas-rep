@@ -12,7 +12,7 @@ const createImages = (giphyArray) => {
 let parsedResult = {};
 xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
+        if (xhr.status >= 200 && xhr.status < 400) {
             parsedResult = JSON.parse(xhr.responseText);
             createImages(parsedResult.data);
         }
@@ -21,5 +21,5 @@ xhr.onreadystatechange = function () {
         }
     }
 }
-xhr.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=ZzVuWxRkofid42aP57nA1OxUn3dGxBha&q=funny&limit=5&offset=0&rating=G&lang=en');
+xhr.open('GET', 'https://api.giphy.com/v1/gifs/search?api_key=ZzVuWxRkofid42aP57nA1OxUn3dGxBha&q=funny&limit=16&offset=0&rating=G&lang=en');
 xhr.send();
