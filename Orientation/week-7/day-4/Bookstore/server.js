@@ -14,7 +14,6 @@ let connection = mysql.createConnection({
 });
 
 app.get('/', (req, res) => {
-
     res.sendFile(__dirname + '/index.html');
 });
 
@@ -25,11 +24,6 @@ app.get('/books', (req, res) => {
         console.log(err)
     });
 });
-
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on port ${PORT}`);
