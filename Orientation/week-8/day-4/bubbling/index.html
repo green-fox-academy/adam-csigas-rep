@@ -46,27 +46,28 @@
         let xCor = 0;
         let yCor = 0;
         let size = 200;
-
+        let div = document.querySelector('div').style;
         let nav = document.querySelector('nav');
+        
         function pictureMover() {
             switch (event.target.getAttribute('data-direction')) {
                 case 'up':
-                    document.querySelector('div').style.backgroundPositionY = `${yCor += 20}px`;
+                    div.backgroundPositionY = `${yCor += 20}px`;
                     break;
                 case 'down':
-                    document.querySelector('div').style.backgroundPositionY = `${yCor -= 20}px`;
+                    div.backgroundPositionY = `${yCor -= 20}px`;
                     break;
                 case 'left':
-                    document.querySelector('div').style.backgroundPositionX = `${xCor += 20}px`;
+                    div.backgroundPositionX = `${xCor += 20}px`;
                     break;
                 case 'right':
-                    document.querySelector('div').style.backgroundPositionX = `${xCor -= 20}px`;
+                    div.backgroundPositionX = `${xCor -= 20}px`;
                     break;
                 case 'in':
-                    document.querySelector('div').style.backgroundSize = `${size *= 1.2}%`;
+                    div.backgroundSize = `${size *= 1.2}%`;
                     break;
                 case 'out':
-                    document.querySelector('div').style.backgroundSize = `${size *= 0.8}%`;
+                    div.backgroundSize = `${size *= 0.8}%`;
                     break;
             }
         }
