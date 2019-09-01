@@ -1,4 +1,6 @@
 properties of the parent:
+-------------------------
+
 - display: flex;
 - direction : ...;
 - justify-content: ...; (space-evenly)
@@ -6,3 +8,8 @@ properties of the parent:
 - flex-wrap : ...; if the window size shrink one element 
 will go to the next line
 
+properties of child:
+---------------------
+
+- order : change the order of the elements;
+- flex-grow :
