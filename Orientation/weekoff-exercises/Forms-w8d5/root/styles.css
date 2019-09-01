@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(224, 221, 221);
+}
+
+ .container {
+     background: white;
+     display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 10px;
+    background: black;
+    color: white;
+    border-radius: 300px;
+    
+}
