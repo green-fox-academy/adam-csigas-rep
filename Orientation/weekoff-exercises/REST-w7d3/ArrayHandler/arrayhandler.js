@@ -39,8 +39,13 @@ function doMath(req, res) {
                     "result": double(req.body.numbers)
                 }
                 break;
+            default :
+            responseObj = {
+                "error" : "something went wrong captain!!4"
+            }
+            
         }
-        res.send(result);
+        res.send(responseObj);
     }
 }
 
