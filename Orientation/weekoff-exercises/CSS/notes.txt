@@ -1,0 +1,8 @@
+properties of the parent:
+- display: flex;
+- direction : ...;
+- justify-content: ...; (space-evenly)
+- align-items : will align the text;
+- flex-wrap : ...; if the window size shrink one element 
+will go to the next line
+

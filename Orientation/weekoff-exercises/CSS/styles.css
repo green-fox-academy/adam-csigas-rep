@@ -7,6 +7,7 @@
 .parent {
     height: 100vh;
     border : 10px solid rgb(0, 0, 0);
+    display: flex;
 }
 
 .child1 {
@@ -18,9 +19,17 @@
     width: 200px;
     height: 200px;
     background: rgb(173,57,53);
+    order: 2;
 }
 .child3 {
     width: 200px;
     height: 200px;
     background: rgb(149,43,140);
+    order: 1;
+}
+.child4 {
+    width: 200px;
+    height: 200px;
+    background: rgb(218, 215, 69);
+    order: 3;
 }
