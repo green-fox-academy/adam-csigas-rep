@@ -25,19 +25,18 @@ module.exports = function (app) {
             }
         }
 
-
-        if(alcoholType[0] === undefined){
+        if (alcoholType[0] === undefined) {
             res.render('home', {
-                title : 'Cocktails',
-                cocktailList : cocktails,
-                alcohols : alcoholList
+                title: 'Cocktails',
+                cocktailList: cocktails,
+                alcohols: alcoholList
             });
-        }else {
-                res.render('home', {
-                    title: `Cocktails with ${req.query.alcohol}`,
-                    cocktailList : alcoholType,
-                    alcohols : alcoholList
-                });
+        } else {
+            res.render('home', {
+                title: `Cocktails with ${req.query.alcohol}`,
+                cocktailList: alcoholType,
+                alcohols: alcoholList
+            });
 
         }
     });

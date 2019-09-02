@@ -1,31 +1,69 @@
-a {
-    font-size: 25px;
-    line-height: 0.1em;
-    display: inline-block;
-    text-decoration: underline;
-    padding: 6px;
-    margin: 4px;
-}
-
-h1 {
-    font-size: 48px;
-}
-
-th {
-    background-color: black;
-    color: white;
-    display: inline-block;
-    text-align: center;
-    padding: 18px;
-    margin: 10px;
-}
-
 body {
-  width: 600px;
-  margin: auto;
-  padding: 0px;
+  font-family: 'Nunito Semibold';
+  text-align: center;
 }
 
-td {
-    display: block;
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  max-width: 700px;
+  margin: 0 auto;
+
+  grid-template-areas:
+  "title title title title"
+  "nav nav nav nav"
+  "name name name price"
+  "coctails coctails coctails coctail-prices"
+}
+/* #one{
+  grid-area: one;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+}
+#two{
+  grid-area: two;
+  display: grid;
+} */
+
+.title{
+  grid-area: title;
+  justify-self: start;
+  font-size: 45px;
+}
+.nav{
+  grid-area: nav;
+  justify-self: start;
+  font-size: 25px;
+}
+.name{
+  grid-area: name;
+  display: grid;
+  background: black;
+  color: white;
+}
+.price{
+  grid-area: price;
+  display: grid;
+  background: black;
+  color: white;
+}
+.coctails{
+  grid-area: coctails;
+  background: rgb(238,238,238);
+}
+.coctails:nth-child(odd){
+  grid-area: coctails;
+  background: rgb(255,255,255);
+  
+}
+.coctail-prices{
+  grid-area: coctail-prices;
+  background: rgb(238,238,238);
+}
+.coctail-prices:nth-child(odd){
+  grid-area: coctail-prices;
+  background: rgb(255,255,255);
 }
