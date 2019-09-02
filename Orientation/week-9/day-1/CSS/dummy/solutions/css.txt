@@ -1,0 +1,84 @@
+Exercise 1.1:
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.green{
+  background: rgb(81,212,0);
+  width: 100px;
+  height: 100px;
+}
+.yellow{
+  background: rgb(255,214,42);
+  width: 100px;
+  height: 100px;
+}
+.purple{
+  background: rgb(176,42,255);
+  width: 100px;
+  height: 100px;
+}
+
+Exercise1.2:
+flex-grow: 
+green 0.25;
+yellow: 1;
+purple : 0.25;
+
+Exercise1.3:
+order
+green:2
+yellow:1
+purple:0
+
+Exercise 1.4:
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.green{
+  background: rgb(81,212,0);
+  width: 100vh/3;
+  height: 25vh;
+  order: 0;
+  align-self: stretch;
+  
+}
+.yellow{
+  background: rgb(255,214,42);
+  width: 100vh/3;
+  height: 50vh;
+  order: 2;
+}
+.purple{
+  background: rgb(176,42,255);
+  width: 100vh/3;
+  height: 25vh;
+  order: 1;
+}
+
+Exercise2:
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,214,42);
+  width: 100vh;
+  height: 100vh;
+  
+}
+
+.purple{
+  background: rgb(176,42,255);
+  width: 100px;
+  height: 100px;
+}
+
+
