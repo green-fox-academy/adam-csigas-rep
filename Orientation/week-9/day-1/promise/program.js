@@ -10,3 +10,10 @@ const onReject = function(error){
 
 promise.then(null,onReject);
 
+/* 
+It works the same : 
+promise.catch(onReject);
+
+promise.then(console.log)
+.catch(onReject)
+*/
