@@ -1,16 +1,17 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: rgb(255,214,42);
-  width: 100vh;
-  height: 100vh;
-  
+  display: flex;
+  height: 200px;
+  justify-content: space-around;
+  align-items: center;
+
 }
 
-.purple{
+.item{
   background: rgb(176,42,255);
   width: 100px;
   height: 100px;
+  justify-self: flex-start;
+  
 }
 
