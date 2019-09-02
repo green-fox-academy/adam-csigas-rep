@@ -1,12 +1,8 @@
 'use strict';
 
 let promise = new Promise(function (resolve, reject) {
-    resolve('I FIRED');
-    reject(new Error('I DID NOT FIRE'));
+    resolve('PROMISE VALUE');
 })
 
-const onRejected = function (error) {
-    console.log(error.message);
-}
-
-promise.then(console.log, onRejected);
+promise.then(console.log);
+console.log('MAIN PROGRAM');
