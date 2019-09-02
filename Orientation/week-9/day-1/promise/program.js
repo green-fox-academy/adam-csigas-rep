@@ -1,5 +1,6 @@
 'use strict';
 
-setTimeout(() => {
-    console.log('TIMED OUT!');
-}, 300);
+let promise = new Promise(function(resolve,reject){
+  setTimeout(() => resolve('FULFILLED!'), 300);
+})
+promise.then(console.log);
