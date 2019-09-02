@@ -15,16 +15,11 @@
 
         #content {
             display: grid;
-            /* grid-template-columns: 30% 50% 20%; */
-            /* grid-template-columns: 1fr 2fr 1fr; */
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, minmax(200px, auto));
-            /* grid-auto-rows: minmax(200px, auto); */
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, minmax(150px,auto));
             max-width: 960px;
-            margin: 0 auto;
-            /* grid-column-gap: 10px;
-            grid-row-gap: 10px; */
             grid-gap: 10px;
+            margin: 0 auto;
         }
 
         #content div {
@@ -34,6 +29,11 @@
 
         #content div:nth-child(even) {
             background: #777;
+        }
+
+        .one{
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
     </style>
 </head>
