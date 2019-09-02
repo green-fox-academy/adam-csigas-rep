@@ -1,6 +1,12 @@
 'use strict';
 
 let promise = new Promise(function(resolve,reject){
-  setTimeout(() => resolve('FULFILLED!'), 300);
+  setTimeout(() => reject(new Error('REJECTED!')), 300);
 })
-promise.then(console.log);
+
+const onReject = function(error){
+  console.log(error.message)
+}
+
+promise.then(null,onReject);
+
