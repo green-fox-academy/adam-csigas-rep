@@ -1,5 +1,6 @@
+----------------
 Exercise 1.1:
-
+----------------
 .container {
   display: flex;
   align-items: center;
@@ -22,7 +23,9 @@ Exercise 1.1:
   height: 100px;
 }
 
+-------------
 Exercise1.2:
+-------------
 flex-grow: 
 green 0.25;
 yellow: 1;
@@ -34,8 +37,9 @@ green:2
 yellow:1
 purple:0
 
+---------------
 Exercise 1.4:
-
+---------------
 .container {
   display: flex;
   justify-content: flex-start;
@@ -63,7 +67,9 @@ Exercise 1.4:
   order: 1;
 }
 
+---------------
 Exercise2:
+---------------
 
 .container {
   display: flex;
