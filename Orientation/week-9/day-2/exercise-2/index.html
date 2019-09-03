@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            
+        }
+        #container{
+            display: grid;
+            background: rgb(51,51,51);
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 6px;
+            
+        }
+        .one{
+            background: rgb(176,42,255);
+            padding : 30px;
+            grid-column: 1/6;
+            grid-row: 1/4;
+        }
+        .two{
+            background: rgb(176,42,255);
+            padding : 30px;
+            grid-column: 1/6;
+            grid-row: 4/7;
+        }
+        .three{
+            background: rgb(176,42,255);
+            padding : 30px;
+            grid-column: 1/6;
+            grid-row: 7/10;
+        }
+        .four{
+            background: rgb(176,42,255);
+            padding : 30px;
+            grid-column: 6/11;
+            grid-row: 7/10;
+        }
+        .five{
+            background: rgb(176,42,255);
+            padding : 30px;
+            grid-column: 11/17;
+            grid-row: 7/10;
+        }
+         #green{
+            display: grid;
+            background: rgb(81,212,0);
+            padding : 10px;
+            grid-column: 6/17;
+            grid-row: 1/7;
+            grid-template-columns: repeat(11, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+         .yellow{
+            background: rgb(255,214,42);
+            padding : 30px;
+            grid-column: 2/11;
+            grid-row: 2/6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- purple boxes -->
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <!-- green box -->
+        <div id="green">
+            <div class="yellow"></div>
+        </div>
+    </div>
+</body>
+
+</html>
