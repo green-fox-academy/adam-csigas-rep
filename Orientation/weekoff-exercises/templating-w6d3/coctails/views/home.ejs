@@ -20,11 +20,11 @@
 
         <h2 class="name">Name</h2>
         <ul id="one" style="list-style: none;">
-            <% cocktailList.forEach(e => { 
+            <% cocktailList.forEach((e,i) => { 
             if(e.isAlcoholic) { %>
-            <li class="coctails" > <%= e.name %> <br> <%= e.contains %> </li>
+            <li class="coctails <%= i %>" > <%= e.name %> <br> <%= e.contains %> </li>
             <% }else{ %>
-            <li class="coctails" > <%= `${e.name} (non-alcoholic)` %> <br> <%= e.contains %> </li>
+            <li class="coctails <%= i %>" > <%= `${e.name} (non-alcoholic)` %> <br> <%= e.contains %> </li>
             <% } %>
 
             <% }); %>
@@ -35,7 +35,7 @@
 
         <ul id="two" style="list-style: none;">
             <% cocktailList.forEach(e => { %>
-            <li class="coctail-prices"> <%= e.price %> Ft </li>
+            <li class="coctail-prices"> <%= e.price %> Ft <br><br></li>
             <% }); %>
         </ul>
 
