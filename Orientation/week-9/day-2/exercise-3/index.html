@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Nunito Semibold';
+            text-align: center;
+        }
+
+        #content {
+            display: grid;
+            grid-gap: 5px;
+            margin: 0 auto;
+            grid-template-columns: repeat(18, 1fr);
+            grid-template-rows: repeat(19, 1fr);
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            background: purple;
+            padding: 5px;
+            grid-gap: 10px;
+            grid-row: 1/4;
+            grid-column: 1/32;
+        }
+
+        nav {
+            background: cyan;
+            grid-row: 2/4;
+            padding: 12px;
+        }
+
+        .nav1 {
+            grid-column: 2/4;
+        }
+
+        .nav2 {
+            grid-column: 4/6;
+        }
+
+        .nav3 {
+            grid-column: 6/8;
+        }
+
+        .nav4 {
+            grid-column: 8/10;
+        }
+
+        aside {
+            background: green;
+            grid-row: 4/16;
+            grid-column : 2/11;
+
+        }
+        main {
+            background: yellow;
+            grid-row: 4/16;
+            grid-column : 11/19;
+            
+        }
+
+
+        footer {
+            background: grey;
+            grid-row: 16/18;
+            grid-column: 2/19;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+        <header>
+            <nav class="nav1">Nav1</nav>
+            <nav class="nav2">Nav2</nav>
+            <nav class="nav3">Nav3</nav>
+            <nav class="nav4">Nav4</nav>
+        </header>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+
+    </div>
+</body>
+
+</html>
