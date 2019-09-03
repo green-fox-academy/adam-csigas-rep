@@ -10,18 +10,17 @@ body {
   grid-gap: 5px;
   max-width: 700px;
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   grid-template-areas:
   "title title title title"
   "nav nav nav nav"
   "name name name price"
 }
-/*  #one{
+/* #one{
   grid-area: one;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5px;
+  grid-column: 1/4;
   grid-template-areas:
   ".1"
   ".2"
@@ -29,6 +28,7 @@ body {
 #two{
   grid-area: two;
   display: grid;
+  grid-column: 4/5;
 } */
 
 .title{
@@ -54,25 +54,27 @@ body {
 .coctails{
   grid-area: coctails;
   background: rgb(238,238,238);
+  text-align: center;
+  grid-column: 1/4;
   width: 350px;
+  
 }
 .coctails:nth-child(odd){
   grid-area: coctails;
   background: rgb(255,255,255);
+  grid-column: 1/4;
   width: 350px;
+
   
 }
 .coctail-prices{
   grid-area: coctail-prices;
   background: rgb(238,238,238);
+  grid-column: 1/4;
 
 }
 .coctail-prices:nth-child(odd){
   grid-area: coctail-prices;
   background: rgb(255,255,255);
-}
-
-li{
-  width: auto;
-  grid-area: li;
+  grid-column: 1/4;
 }

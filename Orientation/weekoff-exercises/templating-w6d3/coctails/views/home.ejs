@@ -34,8 +34,8 @@
         <h2 class="price">Price</h2>
 
         <ul id="two" style="list-style: none;">
-            <% cocktailList.forEach(e => { %>
-            <li class="coctail-prices"> <%= e.price %> Ft <br><br></li>
+            <% cocktailList.forEach((e,i) => { %>
+            <li class="coctail-prices <%= i %>"> <%= e.price %> Ft <br><br></li>
             <% }); %>
         </ul>
 
