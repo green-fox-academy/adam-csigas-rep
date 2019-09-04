@@ -6,7 +6,7 @@ const request = require('supertest');
 
 const app = require('../routes');
 
-test('[GET] /add - returns correct result', (t) => {
+test('groot endpoint', (t) => {
     request(app)
         .get('/groot?somemessage=somebodytolove')
         .set('accept', 'application/json')
@@ -19,7 +19,23 @@ test('[GET] /add - returns correct result', (t) => {
             t.equal(resp.status, 200);
             t.same(resp.body, {
                 "received": "somebodytolove",
-                "translated": "I am Groot!"});
+                "translated": "I am Groot!"
+            });
+            t.end();
+        });
+});
+
+test('groot endpoint', (t) => {
+    request(app)
+        .get('/groot?somemessage=somebodytolove')
+        .set('accept', 'application/json')
+        .end((err, resp) => {
+            if (err) throw err;
+            t.equal(resp.status, 200);
+            t.same(resp.body, {
+                "received": "somebodytolove",
+                "translated": "I am Groot!"
+            });
             t.end();
         });
 });
