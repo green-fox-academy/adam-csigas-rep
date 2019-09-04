@@ -23,7 +23,7 @@ app.get('/yondu', (req, res) => {
         req.query.distance === "" ||
         isNaN(Number(req.query.distance)) ||
         isNaN(Number(req.query.time))) {
-            res
+        res
         res.status(400).send({
             "error": "Either given number is not correct or the given value is not a number."
         })
@@ -35,5 +35,52 @@ app.get('/yondu', (req, res) => {
         })
     }
 });
+
+//----------CARGO
+
+let actualCargo = {
+    "caliber25": 0,
+    "caliber30": 0,
+    "caliber50": 0,
+    "shipstatus": "empty",
+    "ready": false
+}
+const cargoMax = 12500;
+
+app.get('/rocket', (req, res) => {
+    res.send(actualCargo);
+});
+app.get('/rocket/fill', (req, res) => {
+    let storage = (req.query.amount / cargoMax) * 100;
+    let ammoReq = Number(req.query.amount);
+    if (req.query.caliber !== undefined || req.query.amount !== undefined) {
+        if (actualCargo.shipstatus === "empty") {
+            switch (req.query.caliber) {
+                case ".50":
+                    actualCargo.caliber50 += ammoReq;
+                    break;
+                case ".30":
+                    actualCargo.caliber30 += ammoReq;
+                    break;
+                case ".25":
+                    actualCargo.caliber25 += ammoReq;
+                    break;
+            }
+            actualCargo.shipstatus = `${storage}%`;
+            res.send({
+                "received": req.query.caliber,
+                "amount": req.query.amount,
+                "shipstatus": `${storage} %`,
+                "ready": false
+            });
+        }
+    } else {
+        res.send({
+            "error": "Some data might missing. Please check and provide them."
+        })
+    }
+
+});
+
 
 module.exports = app;

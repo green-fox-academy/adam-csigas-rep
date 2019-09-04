@@ -34,7 +34,9 @@ test('groot endpoint2', (t) => {
             t.end();
         });
 });
-test('yondu endpoint1', (t) => {
+// ------------------ yondu task tests start here
+
+test('yondu endpoint1 - when only root accessed', (t) => {
     request(app)
         .get('/yondu')
         .set('accept', 'application/json')
@@ -48,7 +50,7 @@ test('yondu endpoint1', (t) => {
         });
 });
 
-test('yondu endpoint2', (t) => {
+test('yondu endpoint2 - when everything is ok', (t) => {
     request(app)
         .get('/yondu?distance=100&&time=2')
         .set('accept', 'application/json')
@@ -64,7 +66,7 @@ test('yondu endpoint2', (t) => {
         });
 });
 
-test('yondu endpoint3', (t) => {
+test('yondu endpoint3 if distance and time not given', (t) => {
     request(app)
         .get('/yondu?distance=&&time=')
         .set('accept', 'application/json')
@@ -73,6 +75,22 @@ test('yondu endpoint3', (t) => {
             t.equal(resp.status, 400);
             t.same(resp.body, {
                 "error": "Either given number is not correct or the given value is not a number."
+            });
+            t.end();
+        });
+});
+
+//--------------------------
+test('cargo pre-test', (t) => {
+    request(app)
+        .get('/rocket')
+        .set('accept', 'application/json')
+        .end((err, resp) => {
+            if (err) throw err;
+            t.equal(resp.status, 200);
+            t.same(resp.body, {
+                "received": "somebodytolove",
+                "translated": "I am Groot!"
             });
             t.end();
         });
