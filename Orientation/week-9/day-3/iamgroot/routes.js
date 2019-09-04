@@ -17,14 +17,17 @@ app.get('/groot', (req, res) => {
 });
 
 app.get('/yondu', (req, res) => {
-    if (req.query.time === "0" || 
-        req.query.distance === "0" || 
-        isNaN(Number(req.query.distance)) || 
-        isNaN(Number(req.query.time))){
-        res.send({
-            "error" : "Either given number is not correct or the given value is not a number.gittggg"
+    if (req.query.time === "0" ||
+        req.query.time === "" ||
+        req.query.distance === "0" ||
+        req.query.distance === "" ||
+        isNaN(Number(req.query.distance)) ||
+        isNaN(Number(req.query.time))) {
+            res
+        res.status(400).send({
+            "error": "Either given number is not correct or the given value is not a number."
         })
-    } else if (!isNaN(Number(req.query.time)) && !isNaN(Number(req.query.distance))){
+    } else if (!isNaN(Number(req.query.time)) && !isNaN(Number(req.query.distance))) {
         res.send({
             "distance": req.query.distance,
             "time": req.query.time,
@@ -32,9 +35,5 @@ app.get('/yondu', (req, res) => {
         })
     }
 });
-
-module.exports = app;
-
-
 
 module.exports = app;

@@ -34,3 +34,46 @@ test('groot endpoint2', (t) => {
             t.end();
         });
 });
+test('yondu endpoint1', (t) => {
+    request(app)
+        .get('/yondu')
+        .set('accept', 'application/json')
+        .end((err, resp) => {
+            if (err) throw err;
+            t.equal(resp.status, 400);
+            t.same(resp.body, {
+                "error": "Either given number is not correct or the given value is not a number."
+            });
+            t.end();
+        });
+});
+
+test('yondu endpoint2', (t) => {
+    request(app)
+        .get('/yondu?distance=100&&time=2')
+        .set('accept', 'application/json')
+        .end((err, resp) => {
+            if (err) throw err;
+            t.equal(resp.status, 200);
+            t.same(resp.body, {
+                "distance": "100",
+                "time": "2",
+                "speed": 50
+            });
+            t.end();
+        });
+});
+
+test('yondu endpoint3', (t) => {
+    request(app)
+        .get('/yondu?distance=&&time=')
+        .set('accept', 'application/json')
+        .end((err, resp) => {
+            if (err) throw err;
+            t.equal(resp.status, 400);
+            t.same(resp.body, {
+                "error": "Either given number is not correct or the given value is not a number."
+            });
+            t.end();
+        });
+});
