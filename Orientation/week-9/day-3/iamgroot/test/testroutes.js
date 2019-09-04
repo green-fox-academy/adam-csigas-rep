@@ -6,14 +6,10 @@ const request = require('supertest');
 
 const app = require('../routes');
 
-test('groot endpoint', (t) => {
+test('groot endpoint1', (t) => {
     request(app)
         .get('/groot?somemessage=somebodytolove')
         .set('accept', 'application/json')
-        .send({
-            "received": "somebodytolove",
-            "translated": "I am Groot!"
-        })
         .end((err, resp) => {
             if (err) throw err;
             t.equal(resp.status, 200);
@@ -25,16 +21,15 @@ test('groot endpoint', (t) => {
         });
 });
 
-test('groot endpoint', (t) => {
+test('groot endpoint2', (t) => {
     request(app)
-        .get('/groot?somemessage=somebodytolove')
+        .get('/groot')
         .set('accept', 'application/json')
         .end((err, resp) => {
             if (err) throw err;
-            t.equal(resp.status, 200);
+            t.equal(resp.status, 400);
             t.same(resp.body, {
-                "received": "somebodytolove",
-                "translated": "I am Groot!"
+                "error": "I am Groot!"
             });
             t.end();
         });
