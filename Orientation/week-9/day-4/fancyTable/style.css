@@ -31,8 +31,12 @@ th {
  td:nth-child(odd){
      border-right: 1px solid grey;
  }
+ td:nth-child(even)::before{
+     content: "$";
+ }
  tr:nth-child(even){
      background: rgb(235,235,235);
+     
  }
  tr:nth-child(odd){
      background: white;
