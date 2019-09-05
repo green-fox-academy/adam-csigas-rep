@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  height : 100vh;
+}
+
+.green{
+  background: rgb(81,212,0);
+  height: 100px;
+  flex: 1;
+}
+.yellow{
+  background: rgb(255,214,42);
+  height: 100px;
+  flex: 2;
+}
+.purple{
+  background: rgb(176,42,255);
+  height: 100px;
+  flex: 1;
+}
+@media screen and (max-width: 660px) {
+            .container {
+                flex-direction: column;
+                margin: 0 auto;
+            }
+            .yellow{
+                flex: 1;
+            }      
+        };
