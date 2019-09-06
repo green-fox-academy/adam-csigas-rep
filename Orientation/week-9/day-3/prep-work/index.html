@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>10</div>
+
+    <button>defuse</button>
+
+    <script>
+        'use strict';
+        const btn = document.querySelector("button");
+        let div = Number(document.querySelector("div").innerText);
+
+        const bomb = setInterval(() => {
+            if (div > 0) {
+                document.querySelector("div").innerText = div--;
+            } else {
+                clearInterval(bomb);
+                document.querySelector("div").innerText = "Bomb exploded";
+            }
+        }, 1000);
+
+        let defuse = function () {
+            if(document.querySelector("div").innerText !== "Bomb exploded"){
+            clearInterval(bomb);
+            document.querySelector("div").innerText = "Bomb defused";
+            }
+        }
+
+        btn.addEventListener("click", defuse);
+    </script>
+</body>
+
+</html>

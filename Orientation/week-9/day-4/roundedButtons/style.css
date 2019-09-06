@@ -4,8 +4,30 @@
   justify-content: center;
   align-items: center;
   border : 1px solid black;
+  background: rgb(47,48,96);
 }
 
 .button {
     border: 1px solid black;
+    padding: 30px 60px;
+    margin : 30px;
+    color: rgb(145,166,213);
+    border-radius: 10px;
+    text-decoration: none;
+}
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.one {
+    background: rgba(211,66,49,1);
+}
+.one:hover {
+    
+}
+.two{
+    background: rgba(63,93,157,1);
+}
+.three{
+    background: rgba(240,242,250,1);
 }
