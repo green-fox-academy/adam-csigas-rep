@@ -29,7 +29,10 @@ app.get('/', (req, res) => {
 
 app.get('/books', (req, res) => {
     let bookTitles =
-    'SELECT book_name,aut_name FROM book_mast JOIN author ON book_mast.aut_id = author.aut_id';
+    `SELECT book_name,aut_name,cate_descrip,pub_name FROM book_mast
+    JOIN author ON book_mast.aut_id = author.aut_id
+    JOIN category ON book_mast.cate_id = category.cate_id
+    JOIN newpublisher ON book_mast.pub_id = newpublisher.pub_id`;
     connection.query(bookTitles, (err, rows) => {
         res.send(rows);
         console.log(err)

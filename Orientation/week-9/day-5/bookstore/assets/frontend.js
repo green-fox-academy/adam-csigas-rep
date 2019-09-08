@@ -1,9 +1,10 @@
 function render(data){
     data.forEach(e => {
-        let paragraph = document.createElement('p');
+        let tablebody = document.querySelector('tbody');
+        let tableRow = document.createElement('tr');
         let bookname = e.book_name;
-        paragraph.textContent= bookname;
-        document.body.appendChild(paragraph);
+        tableRow.textContent= bookname;
+        tablebody.appendChild(tableRow);
     });
 } 
 const URL = 'http://localhost:3000';
