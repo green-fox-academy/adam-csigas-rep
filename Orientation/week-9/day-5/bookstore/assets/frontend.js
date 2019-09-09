@@ -11,7 +11,6 @@ function render(data) {
       tableRow.appendChild(tableData);
     }
     tableBody.appendChild(tableRow);
-    //what book_name,aut_name,cate_descrip,pub_name
   });
 }
 const URL = 'http://localhost:3000';
