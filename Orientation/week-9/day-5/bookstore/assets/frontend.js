@@ -3,7 +3,7 @@ function render(data) {
     //where
     let tableBody = document.querySelector('tbody');
     let tableRow = document.createElement('tr');
-    let infosOfBook = [e.book_name, e.aut_name, e.cate_descrip, e.pub_name,e.book_price];
+    let infosOfBook = [e.book_name, e.aut_name, e.cate_descrip, e.pub_name, e.book_price];
 
     for (let i = 0; i < infosOfBook.length; i++) {
       let tableData = document.createElement('td');
@@ -14,9 +14,30 @@ function render(data) {
   });
 }
 const URL = 'http://localhost:3000';
+
 fetch(URL + '/books')
   .then(response => response.json())
+  //.then(()=>{console.log(document.querySelector('tbody'))})
   .then(render)
+  
 
 
+/* 
+event listener selectre --> change? onchange vmi
+fetch erre req.query. === science
 
+*/
+
+const selectbtn = document.getElementById('catFilter');
+
+selectbtn.addEventListener('change',function(){
+  console.log(this.value)
+  fetch(URL + `/books?category=${this.value}`)
+    .then(response =>response.json())
+    .then(render)
+})
+
+let a = document.getElementById('country');
+a.addEventListener('change', function () {
+  alert(this.value);
+}, false);
