@@ -1,9 +1,9 @@
-/*   table {
+  table {
    font-family: arial, sans-serif;
    border-collapse: collapse;
    width: 100%;
  }
- #main {
+ #mainrow {
    background: black;
    color : white;
  }
@@ -17,4 +17,4 @@
    border: 1px solid #dddddd;
    text-align: left;
    padding: 8px;
- }  */
+ } 
