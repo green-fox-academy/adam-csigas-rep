@@ -19,21 +19,17 @@ fetch(URL + '/books')
   .then(response => response.json())
   .then(render)
   
-
-
-/* 
-event listener selectre --> change? onchange vmi
-fetch erre req.query. === science
-
-*/
-
 const selectbtn = document.getElementById('catFilter');
 
 selectbtn.addEventListener('change',function(){
-  console.log(this.value)
-  if(!document.getElementById('mainrow')){
-    
-  }
+  //remove previous tablerows and data except first line
+  let nodeList = document.querySelectorAll('tr');
+  nodeList.forEach((e,i)=>{
+    if(i > 0){
+      e.remove();
+    }
+  })
+  //fetch the stuff you need
   fetch(URL + `/books?category=${this.value}`)
     .then(response =>response.json())
     .then(render)
