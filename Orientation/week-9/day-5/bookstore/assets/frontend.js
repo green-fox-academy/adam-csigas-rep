@@ -17,7 +17,6 @@ const URL = 'http://localhost:3000';
 
 fetch(URL + '/books')
   .then(response => response.json())
-  //.then(()=>{console.log(document.querySelector('tbody'))})
   .then(render)
   
 
@@ -32,12 +31,11 @@ const selectbtn = document.getElementById('catFilter');
 
 selectbtn.addEventListener('change',function(){
   console.log(this.value)
+  if(!document.getElementById('mainrow')){
+    
+  }
   fetch(URL + `/books?category=${this.value}`)
     .then(response =>response.json())
     .then(render)
 })
 
-let a = document.getElementById('country');
-a.addEventListener('change', function () {
-  alert(this.value);
-}, false);

@@ -26,39 +26,43 @@ connection.connect(error => {
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
-let bookTitles =
-`SELECT book_name,aut_name,cate_descrip,pub_name,book_price FROM book_mast 
-JOIN author ON book_mast.aut_id = author.aut_id 
-JOIN category ON book_mast.cate_id = category.cate_id 
-JOIN newpublisher ON book_mast.pub_id = newpublisher.pub_id`;
+
 
 app.get('/books', (req, res) => {
-  const {category} = req.query;
-  if(category){
+  const { category } = req.query;
+  let bookTitles =
+    `SELECT book_name,aut_name,cate_descrip,pub_name,book_price FROM book_mast 
+    JOIN author ON book_mast.aut_id = author.aut_id 
+    JOIN category ON book_mast.cate_id = category.cate_id 
+    JOIN newpublisher ON book_mast.pub_id = newpublisher.pub_id`;
+  if (category) {
     bookTitles = `SELECT book_name,aut_name,cate_descrip,pub_name,book_price FROM book_mast 
-  JOIN author ON book_mast.aut_id = author.aut_id 
-  JOIN category ON book_mast.cate_id = category.cate_id 
-  JOIN newpublisher ON book_mast.pub_id = newpublisher.pub_id
-  WHERE cate_descrip = ?`;
-
-
+      JOIN author ON book_mast.aut_id = author.aut_id 
+      JOIN category ON book_mast.cate_id = category.cate_id 
+      JOIN newpublisher ON book_mast.pub_id = newpublisher.pub_id
+      WHERE cate_descrip = ?;`;
+  }else{
+    let bookTitles =
+      `SELECT book_name,aut_name,cate_descrip,pub_name,book_price FROM book_mast 
+    JOIN author ON book_mast.aut_id = author.aut_id 
+    JOIN category ON book_mast.cate_id = category.cate_id 
+    JOIN newpublisher ON book_mast.pub_id = newpublisher.pub_id`;
   }
 
   connection.query(bookTitles, category, (err, rows) => {
-    if(err){
+    if (err) {
       console.log(err);
     }
     //console.log(JSON.parse(JSON.stringify(rows)));
-    res.json(JSON.parse(JSON.stringify(rows)));
+    res.json(rows);
   });
 });
 app.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}`);
 });
 
-/* 
+/*
 different queries
 WHERE cate_descrip = "category"
  */
 
- 
