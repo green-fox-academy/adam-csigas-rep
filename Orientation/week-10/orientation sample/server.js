@@ -44,6 +44,17 @@ app.post('/api/links', (req, res) => {
     })
 })
 
+app.get('/api/links', (req,res) => {
+let allEntries = `SELECT id,url,alias,hitCount FROM aliases`;
+  connection.query(allEntries, (err, rows) => {
+    if (err) {
+      console.log(err);
+    }
+    //console.log(JSON.parse(JSON.stringify(rows)));
+    res.json(rows);
+  });
+})
+
 connection.connect(error => {
   if (error) {
     console.log(`cannot connect to database.`)
