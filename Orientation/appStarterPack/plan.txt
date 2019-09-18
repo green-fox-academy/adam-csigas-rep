@@ -1,0 +1,10 @@
+1, npm init
+2, npm install dependencies
+3, server.js => require - listen on port // no endpoints
+4, first static endpoint (add-report.html/ejs)
+5, (optional) fetch users - if no ejs has been used
+6, post /reports endpoint
+7, form submission
+8, display reports (with ejs or js)
+9, delete
+8, other endpoints
