@@ -49,6 +49,14 @@ app.post(`/api/items/:id/bids`,(req,res) => {
       res.sendStatus(500);
     }else if(!resp[0]){
       res.sendStatus(400);
+    }else if(!name || !amount){
+      res.send({
+        message : 'Some of the required parameter(s) might missing.Check.'
+      })
+    } else if (isNaN(Number.parseInt(amount, 10))){
+      res.send({
+        message : 'Amount format is unacceptable. Please numberize it.'
+      })
     }else {
       if(new Date() > resp[0].expiryDate){
         res.send({
