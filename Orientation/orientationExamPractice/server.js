@@ -44,25 +44,25 @@ app.post(`/api/items/:id/bids`,(req,res) => {
   const {name, amount} = req.body;
   const id = req.params.id;
   let data = [name,amount,id]
-  connection.query('SELECT * FROM items WHERE id =?', id, (err,resp) => {
+  connection.query('SELECT * FROM items WHERE id =?', id, (err,rows) => {
     if(err){
       res.sendStatus(500);
-    }else if(!resp[0]){
+    }else if(!rows[0]){
       res.sendStatus(400);
     }else if(!name || !amount){
       res.send({
-        message : 'Some of the required parameter(s) might missing.Check.'
-      })
+        message : 'Some of the required parameter(s) might be missing.Check.'
+      });
     } else if (isNaN(Number.parseInt(amount, 10))){
       res.send({
         message : 'Amount format is unacceptable. Please numberize it.'
-      })
+      });
     }else {
-      if(new Date() > resp[0].expiryDate){
+      if(new Date() > rows[0].expiryDate){
         res.send({
           message: 'The auction is over!'
-        })
-      } else if (amount <= resp[0].highestBid) {
+        });
+      } else if (amount <= rows[0].highestBid) {
         res.send({
           message: 'Your bid is below the highest bid!'
         });
@@ -74,7 +74,7 @@ app.post(`/api/items/:id/bids`,(req,res) => {
           }else{
             res.send({
               message: 'Your bid was successful!'
-            })
+            });
           }
         })
       }

@@ -18,16 +18,17 @@
     <form>
         <label for="biditem">Bid item</label>
         <select id="biditem">
-            <option value="">Select an item</option>
+            <option value="" disabled selected hidden required>Select an item</option>
         </select>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
         <label for="amount">Amount</label>
         <input type="text" id="amount" name="amount" required>
         <input type="button" id="bid" value="bid">
+        <br>
+        <input type="checkbox" name="age" id="agecheck" value="agecheck" onclick="myFunction()">
+        <label for="agecheck">I'm over 18.</label>
     </form>
-
-
     <script src="./frontend.js"></script>
 </body>
 
