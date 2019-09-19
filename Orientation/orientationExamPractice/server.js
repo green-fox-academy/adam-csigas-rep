@@ -42,16 +42,33 @@ app.get('/api/items', (req,res) => {
 
 app.post('/api/items/:id/bids',(req,res) => {
   const {name, amount} = req.body;
+  const id = req.params.id;
+  let data = [name,amount,id]
   connection.query('SELECT * FROM items WHERE id =?', req.params.id, (err,resp) => {
     if(err){
       res.sendStatus(500);
+    }else if(!resp[0]){
+      res.sendStatus(400);
     }else {
       if(new Date() > resp[0].expiryDate){
         res.send({
           message: "The auction is over!"
         })
-      }else{
-        res.send({message : 'yolo'});
+      } else if (amount <= resp[0].highestBid) {
+        res.send({
+          message: "Your bid is below the highest bid!"
+        });
+      }
+       else{
+        connection.query('UPDATE items SET highestBidderName = ?,highestBid = ? WHERE id=?',data, (err,rows) => {
+          if(err){
+            res.sendStatus(500);
+          }else{
+            res.send({
+              message: "Successful!"
+            })
+          }
+        })
       }
     }
   })
