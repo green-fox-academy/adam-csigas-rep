@@ -1,5 +1,5 @@
 'use strict';
-
+const ul = document.querySelector('ul');
 //items
 const loadData = () => {
   fetch('/api/items')
@@ -18,7 +18,6 @@ const loadData = () => {
     .then(response3 => {
       const itemsToList = response3.items;
       itemsToList.forEach(e => {
-        const ul = document.querySelector('ul');
         let li = document.createElement('li');
         li.textContent = `${e.title} (highest bid: ${e.highestBid} , ${e.highestBidderName})`;
         ul.appendChild(li);
@@ -26,3 +25,34 @@ const loadData = () => {
     })
 }
 window.onload = loadData;
+
+const bidBtn = document.getElementById('bid');
+let biditem = document.getElementById('biditem');
+let name = document.getElementById('name');
+let amount = document.getElementById('amount');
+let p = document.querySelector('p');
+
+bidBtn.addEventListener('click', e => {
+  fetch(`/api/items/${biditem.value}/bids`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      id : biditem.value,
+      name: name.value,
+      amount: amount.value
+    })
+  })
+  .then(response => response.json())
+  .then(response =>{
+    p.textContent = response.message;
+    if (response.message === 'Your bid was successful!'){
+      document.querySelector('form').reset();
+      ul.innerHTML = '';
+      loadData();
+    }
+    return;
+  })
+  
+});

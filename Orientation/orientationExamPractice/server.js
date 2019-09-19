@@ -40,11 +40,11 @@ app.get('/api/items', (req,res) => {
   });
 })
 
-app.post('/api/items/:id/bids',(req,res) => {
+app.post(`/api/items/:id/bids`,(req,res) => {
   const {name, amount} = req.body;
   const id = req.params.id;
   let data = [name,amount,id]
-  connection.query('SELECT * FROM items WHERE id =?', req.params.id, (err,resp) => {
+  connection.query('SELECT * FROM items WHERE id =?', id, (err,resp) => {
     if(err){
       res.sendStatus(500);
     }else if(!resp[0]){
@@ -52,11 +52,11 @@ app.post('/api/items/:id/bids',(req,res) => {
     }else {
       if(new Date() > resp[0].expiryDate){
         res.send({
-          message: "The auction is over!"
+          message: 'The auction is over!'
         })
       } else if (amount <= resp[0].highestBid) {
         res.send({
-          message: "Your bid is below the highest bid!"
+          message: 'Your bid is below the highest bid!'
         });
       }
        else{
@@ -65,7 +65,7 @@ app.post('/api/items/:id/bids',(req,res) => {
             res.sendStatus(500);
           }else{
             res.send({
-              message: "Successful!"
+              message: 'Your bid was successful!'
             })
           }
         })
@@ -73,10 +73,6 @@ app.post('/api/items/:id/bids',(req,res) => {
     }
   })
 })
-
-
 app.listen(PORT, () => {
   console.log(`Server is up and running on port ${PORT}`);
 });
-
-//console.log(resp[0].title);
