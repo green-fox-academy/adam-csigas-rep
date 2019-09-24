@@ -14,8 +14,8 @@ export class AppComponent {
   }
 
   ngOnInit(){
-/*     let observable = this.http.get('https://api.github.com/users/koushikkothagal');
-    observable.subscribe((response) => console.log(response)); */
+    let obs= this.http.get('https://api.github.com/users/koushikkothagal');
+    obs.subscribe((response) => console.log(response)); 
   }
 
 }

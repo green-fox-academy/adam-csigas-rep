@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { TestService } from 'src/app/test.service';
 
 @Component({
@@ -8,11 +9,21 @@ import { TestService } from 'src/app/test.service';
 })
 export class ViewComponentComponent implements OnInit {
 
-  constructor(private svc : TestService) {
-    svc.printToConsole("From innern module / component")
-   }
+  userName: string = "";
+  response: any;
+
+  constructor(private http: HttpClient) {
+
+  }
 
   ngOnInit() {
   }
 
+  search() {
+    this.http.get(`https://api.github.com/users/` + this.userName)
+      .subscribe((response) => {
+        this.response = response;
+        console.log(this.response);
+      })
+  }
 }
