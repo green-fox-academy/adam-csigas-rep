@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'routes-intro';
-
-  routes = [
-    {linkName : 'Home', url: 'home'},
-    {linkName : 'Settings', url: 'settings'},
-  ]
+  title = 'weather-app';
 }

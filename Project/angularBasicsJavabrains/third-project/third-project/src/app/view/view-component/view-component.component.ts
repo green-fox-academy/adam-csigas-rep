@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TestService } from 'src/app/test.service';
 
 @Component({
   selector: 'app-view-component',
