@@ -1,5 +1,5 @@
 <h1>One day I'll show you the weather</h1>
-Weather in : <input id="weather" type="text" [(ngModel)]="nameofCity" value="">
+Weather in : <input id="weather" type="text" [(ngModel)]="nameofCity">
 <div *ngIf="!nameofCity">
     <button (click)="search()" disabled>Search</button>
 </div>
@@ -8,7 +8,15 @@ Weather in : <input id="weather" type="text" [(ngModel)]="nameofCity" value="">
 </div>
 
 <div *ngIf="response">
+    <h2>Weather in {{response.name}}</h2>
     <p>Name of the city: {{response.name}}</p>
     <p>Name of the country: {{response.sys.country }}</p>
     <p>Temperature: {{response.main.temp }} C°</p>
+</div>
+
+<h2>Weather in Budapest</h2>
+<div>
+    <p>Name of the city: {{response1.name}}</p>
+    <p>Name of the country: {{response1.sys.country }}</p>
+    <p>Temperature: {{response1.main.temp }} C°</p>
 </div>
