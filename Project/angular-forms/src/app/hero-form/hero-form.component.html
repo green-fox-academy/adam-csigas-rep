@@ -13,19 +13,19 @@
             </div>
 
             <div class="form-group">
+                <label for="alterEgo">Alter Ego</label>
+                <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
                 <label for="power">Hero Power</label>
                 <select id="power" class="form-control" required [(ngModel)]="model.power" name="power">
                     <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
                 </select>
-                <label for="alterEgo">Alter Ego</label>
-                <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
             </div>
 
             <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
 
         </form>
     </div>
-    <div [hidden]="!submitted">
+    <div [hidden]="!submitted"> 
         <h2>You submitted the following:</h2>
         <div class="row">
             <div class="col-xs-3">Name</div>
@@ -33,7 +33,10 @@
         </div>
         <div class="row">
             <div class="col-xs-3">Alter Ego</div>
-            <div class="col-xs-9">{{ model.alterEgo }}</div>
+            <div class="col-xs-9"  *ngIf="model.alterEgo && submitted; else default">{{ model.alterEgo }}</div>
+            <ng-template #default>
+                <div>{{ model.name }}'s Kingdom</div>
+            </ng-template>
         </div>
         <div class="row">
             <div class="col-xs-3">Power</div>
