@@ -2,17 +2,18 @@
 
 let Mahgrades = [73, 67, 38, 33, 84, 29];
 
-function gradingStudents(grades) {
-  grades = grades.map(e => {
-    if (e < 38) {
-      return e;
-    }
-    if (e % 5 > 2) {
-      return e - e % 5 + 5;
-    }
+const logika = e => {
+  if (e < 38) {
     return e;
-  })
-  return grades;
+  }
+  if (e % 5 > 2) {
+    return e - e % 5 + 5;
+  }
+  return e;
+};
+
+function gradingStudents(grades) {
+  return grades.map(logika);
 }
 
 /* function gradingStudents(grades) {
@@ -24,4 +25,4 @@ function gradingStudents(grades) {
   return grades;
 } */
 
-console.log(mygrades)
+console.log(gradingStudents(Mahgrades))
