@@ -1,0 +1,20 @@
+## Backend resource updating middleware
+
+As a frontend developer i want that every request updating the resources, so i can always get the right data back.
+
+Checklist:
+- Resource model updated with a current timestamp.
+- Difference calculated from the current time and the resource last timestamp.
+- New amount calculated from the difference multiplying by the generation.
+- Resource updated with the new timestamp.
+- All the POST and PUT endpoint use this middleware.
+
+```gherkin
+Scenario 1:
+Given all the POST, PUT endpoints (except login, register).
+When i send a request to it.
+Then the resources updating.
+```
+
+- dummy endpoint
+- if we send a request to the dummy endpoint it will UPDATE timestamp
