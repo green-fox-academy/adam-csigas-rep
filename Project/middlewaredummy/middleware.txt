@@ -18,3 +18,4 @@ Then the resources updating.
 
 - dummy endpoint
 - if we send a request to the dummy endpoint it will UPDATE timestamp
+- routers are about nesting servers inside servers
