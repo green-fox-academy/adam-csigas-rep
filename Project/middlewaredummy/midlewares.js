@@ -1,2 +1,0 @@
-const sourcemodel = require('./resourceModel');
-

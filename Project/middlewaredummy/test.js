@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3100;
 const apiRouter = express.Router();
 
+
 //app.use(express.static('assets'));
 //app.use(express.json());
 app.use(logger)
@@ -36,7 +37,6 @@ app.get('/hello',hello,bye);
 app.get('/ege',hello,bye);
 app.get('/jann',hello);
 app.get('/jani',bye); 
-
 
 
 app.listen(PORT, () => {

@@ -1,21 +1,13 @@
-const resourceModel = require('./resourceModel'); // it's data coming from the db !!!!!!!
+const updateResource = require('./updateResource');
+const model = require('./resourceModel');
 
-console.log(resourceModel)
-
-
-console.log(Date.now())
-
-resourceModel.resources.forEach(e => {
-  let time = Date.now();
-  let difference = (time - e.updatedAt); //ms
-  let remainder = difference % 60000;
-  let passedMinutes = (difference - remainder) / 60000;
-  console.log(passedMinutes)
-  if (passedMinutes < 1) {
-    //do nothing
-  } else {
-    e.updatedAt = time - remainder;
-    e.amount += e.generation * passedMinutes;
+const resourceMiddleware = (req,res,next) => {
+  if (req.url === '/login' || req.url === '/register') {
+    res.send({message : 'nope'});
+  }else if (req.method === 'POST' || req.method === 'PUT') {
+    updateResource(model);
+    res.send(model.resources);
   }
-  console.log(e)
-})
+}
+
+module.exports = resourceMiddleware;
