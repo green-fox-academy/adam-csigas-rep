@@ -6,8 +6,8 @@ Checklist:
 - Resource model updated with a current timestamp. ok
 - Difference calculated from the current time and the resource last timestamp. ok
 - New amount calculated from the difference multiplying by the generation. ok
-- Resource updated with the new timestamp. 
-- All the POST and PUT endpoint use this middleware. ok?
+- Resource updated with the new timestamp. ok
+- All the POST and PUT endpoint use this middleware. ok
 
 ```gherkin
 Scenario 1:

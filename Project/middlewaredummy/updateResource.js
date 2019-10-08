@@ -1,4 +1,4 @@
-const resourceModel = require('./resourceModel'); // it's data coming from the db !!!!!!!
+
 
 function updateToActualResource(resourceModel) {
   resourceModel.resources.forEach(e => {
@@ -17,6 +17,7 @@ function updateToActualResource(resourceModel) {
       e.amount += e.generation * passedMinutes;
       console.log(e)
     }
+    return [e.updatedAt,e.amount];
   })
 }
 
