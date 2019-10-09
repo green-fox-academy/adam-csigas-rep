@@ -2,14 +2,11 @@ const updateResource = require('./updateResource');
 const model = require('./resourceModel');
 
 const resourceMiddleware = (req, res, next) => {
-  if (req.method === 'POST' || req.method === 'PUT') {
-    if (req.url !== '/login' || req.url !== '/register') {
+  if ((req.method === 'POST' || req.method === 'PUT') && req.url !== '/login' && req.url !== '/register') {
       updateResource(model);
       res.send(model.resources);
-      next();
-      return;
-    }
-  }else {
+  } else {
+    res.send({ message: 'ylo' })
     next();
     return;
   }
